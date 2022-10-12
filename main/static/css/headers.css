@@ -53,8 +53,14 @@
       }
 
 header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 20px;
+    top: 0;
+	height: 50px;
+	width: 100%;
+	max-width: 640px;
+	margin:0px auto;
+	position: absolute;
+  	z-index: 99999999;
+  	border-bottom: 1px solid #000;
+  	background: #fff;
+
 }

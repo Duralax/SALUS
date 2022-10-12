@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e957e18-d3b8-46cd-9021-83663c43a5d4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/main/main/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/static/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/static/css/headers.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/static/img/backgr1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/static/img/spng.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/static/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1e957e18-d3b8-46cd-9021-83663c43a5d4" name="Changes" comment="bootstrap header">
+      <change afterPath="$PROJECT_DIR$/main/static/css/carousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/static/img/back1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/static/img/back2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/static/img/back3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/main/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/main/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/main/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/main/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/main/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/static/css/headers.css" beforeDir="false" afterPath="$PROJECT_DIR$/main/static/css/headers.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,9 +52,9 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\uitye\PycharmProjects\SALUS\main\static\img" />
       <recent name="C:\Users\uitye\PycharmProjects\SALUS\main\static\css" />
+      <recent name="C:\Users\uitye\PycharmProjects\SALUS\main\templates" />
       <recent name="C:\Users\uitye\PycharmProjects\SALUS\main\static\js" />
       <recent name="C:\Users\uitye\PycharmProjects\SALUS\main\static" />
-      <recent name="C:\Users\uitye\PycharmProjects\SALUS\main\templates" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -69,6 +66,14 @@
       <option name="presentableId" value="Default" />
       <updated>1665235950323</updated>
     </task>
+    <task id="LOCAL-00001" summary="bootstrap header">
+      <created>1665533812958</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1665533812958</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -81,5 +86,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="bootstrap header" />
+    <option name="LAST_COMMIT_MESSAGE" value="bootstrap header" />
   </component>
 </project>
