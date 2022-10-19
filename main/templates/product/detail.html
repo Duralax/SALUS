@@ -4,7 +4,6 @@
 {{ product.name }}
 {% endblock %}
 {% block container %}
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 <div class="product-detail">
 <img src="{% if product.image %}{{ product.image.url }}{% else %}
@@ -13,7 +12,7 @@
 <h2>
 <a href="{{ product.category.get_absolute_url }}">{{product.category }}</a>
 </h2>
-<p class="price">${{ product.price }}</p>
+    <p class="price"><h3>Цена: ₽{{ product.price }}</h3></p>
 {{ product.description|linebreaks }}
     Количество: {{ product.amount }}
 </div>
