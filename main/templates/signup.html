@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+{% load static %}
+{% load crispy_forms_tags  %}
+{% block title %}Sign Up{% endblock %}
+{% block container %}
+
+<main style="margin-left: 300px;
+              margin-top: 30px;
+              margin-right: 300px;">
+
+  <form method="post">
+      {% csrf_token %}
+    <h1>Пожалуйста зарегистрируйтесь</h1>
+    {{ form|crispy }}
+    <button class="btn btn-success" type="submit">Регистрация</button>
+  </form>
+</main>
+{% endblock container %}

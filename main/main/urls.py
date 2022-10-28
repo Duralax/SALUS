@@ -24,6 +24,8 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('admin/', admin.site.urls),
     path('product/', include('shop.urls', namespace='shop')),
+    path('authentication/', include('authentication.urls')),
+    path('authentication/', include('django.contrib.auth.urls')),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

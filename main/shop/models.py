@@ -1,5 +1,7 @@
 from django.db import models
 from django.urls import reverse
+from django.core.validators import MinValueValidator
+from decimal import Decimal
 
 # Create your models here.
 
@@ -27,7 +29,7 @@ class Product(models.Model):
     slug = models.CharField(max_length=150, db_index=True, unique=True)
     image = models.ImageField(upload_to='product/%Y/%m/%d', blank=True)
     description = models.TextField(max_length=1000, blank=True)
-    price = models.DecimalField(max_digits=10, decimal_places=2)
+    price = models.DecimalField(max_digits=6, decimal_places=2, validators=[MinValueValidator(Decimal('0.01'))])
     available = models.BooleanField(default=True)
     amount = models.DecimalField(max_digits=10, decimal_places=0)
     created = models.DateTimeField(auto_now_add=True)
