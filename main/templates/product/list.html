@@ -2,9 +2,10 @@
 {% load static %}
 {% block title %}Товары
 {% endblock %}
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 {% block container %}
+
+<a href="{% url 'myshop:product_create' %}" class="btn btn-primary">Добавить товар</a>
 
 <h3>Категория</h3>
 <ul>
@@ -22,34 +23,7 @@
 
 
 <h1>{% if category %}{{ category.name }}{% else %}Товары{% endif %}</h1>
-<!--
-{% for product in products %}
 
-<div class="card" style="width: 18rem;
-                                    text-align: center;
-                                    display: inline-bloc;
-                                    margin: 10px;">
-    <div class="card-header">
-            <h5 >{{ product.name }}</h5>
-            <div class="card-body">
-
-                <a href="{{ product.get_absolute_url }}">
-                    <img src="{% if product.image %}{{ product.image.url }}{%else %}{% static 'img/no-image.png' %}{% endif %}" class="card-img-top">
-                </a>
-
-            <a href="{{ product.get_absolute_url }}">{{ post.product.name }}</a>
-
-            <br>
-            Количество: {{ product.amount }}<br>
-            ${{ product.price }}
-                <br>
-
-                <a href="{{ product.get_absolute_url }}" class="btn btn-primary">Подробнее</a>
-        </div>
-    </div>
-{% endfor %}
-</div>
--->
 {% for product in products %}
 <div class="card" style="width: 600px;
                   text-align: center;
@@ -59,18 +33,18 @@
     <div calss="card-header">
         <span class="font-weight-bold"><h4>{{ product.name }}</h4></span>
         <div class="card-body">
-            <a href="{{ product.get_absolute_url }}">
+            <a href="http://127.0.0.1:8000/product/{{ product.id }} ">
                     <img width="400px" height="400px" src="{% if product.image %}{{ product.image.url }}{%else %}{% static 'img/no-image.png' %}{% endif %}" >
                 </a>
             <div>
-                <a href="{{ product.get_absolute_url }}">{{ post.product.name }}</a>
+                <a href="http://127.0.0.1:8000/product/{{ product.id }} ">{{ post.product.name }}</a>
 
                 <br>
                 Количество: {{ product.amount }}<br>
                 ₽{{ product.price }}
                     <br>
 
-                <a href="{{ product.get_absolute_url }}" class="btn btn-primary">Подробнее</a>
+                <a href=" http://127.0.0.1:8000/product/{{ product.id }} " class="btn btn-primary">Подробнее</a>
             </div>
         </div>
     </div>

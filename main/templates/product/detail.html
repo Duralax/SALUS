@@ -15,5 +15,10 @@
     <p class="price"><h3>Цена: ₽{{ product.price }}</h3></p>
 {{ product.description|linebreaks }}
     Количество: {{ product.amount }}
+
+
+       {% csrf_token %}
+       <button class="btn btn-danger" type="submit" >Удалить</button>
+
 </div>
 {% endblock container %}

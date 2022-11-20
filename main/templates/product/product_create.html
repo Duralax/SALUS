@@ -1,0 +1,23 @@
+{%extends 'index.html'%}
+{% load static %}
+{% block title %}Форма добавления товара
+{% endblock %}
+
+{% block container %}
+<div class="features">
+    <h1>Форма добавления товара</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form }}<br>
+        <button class="btn btn-success" type="submit">Добавить товар</button>
+    </form>
+    {% if img_obj %}
+        <h3>Succesfully uploaded : {{img_obj.title}}</h3>
+    <img src="{% if product.image %}{{ product.image.url }}{% else %}
+{% static "img/no-image.png" %}{% endif %}">
+{% endif %}
+</div>
+
+
+
+{% endblock container %}

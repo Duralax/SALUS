@@ -1,30 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e957e18-d3b8-46cd-9021-83663c43a5d4" name="Changes" comment="products 2">
-      <change afterPath="$PROJECT_DIR$/main/authentication/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/authentication/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/authentication/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/10/19/Screenshot_70.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/10/19/Screenshot_70_PfvD13B.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/10/19/Screenshot_70_vH1c2ae.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/templates/registration/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/templates/registration/password_change_done.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/templates/registration/password_change_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/templates/registration/password_reset_complete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/templates/registration/password_reset_confirm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/templates/registration/password_reset_done" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/templates/registration/password_reset_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/templates/signup.html" afterDir="false" />
+    <list default="true" id="1e957e18-d3b8-46cd-9021-83663c43a5d4" name="Changes" comment="pswrds">
+      <change afterPath="$PROJECT_DIR$/main/authentication/migrations/0002_customuser_role.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/20/3423423.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/20/Screenshot_69.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/20/Screenshot_71.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/20/df99ac63e73bdd18a63cf6765d018ea4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/shop/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/shop/migrations/0004_alter_product_index_together_remove_product_slug.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/shop/migrations/0005_remove_product_available.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/shop/migrations/0006_image.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/templates/product/product_create.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/authentication/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/authentication/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/authentication/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/authentication/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/authentication/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/authentication/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/authentication/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/authentication/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/main/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/main/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/main/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/main/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/shop/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/shop/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/shop/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/shop/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/shop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/shop/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/shop/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/shop/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/product/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/product/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/product/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/product/list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +33,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -118,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666202158380</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="pswrds">
+      <created>1666982546653</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1666982546653</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -138,6 +144,7 @@
     <MESSAGE value="home page" />
     <MESSAGE value="products" />
     <MESSAGE value="products 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="products 2" />
+    <MESSAGE value="pswrds" />
+    <option name="LAST_COMMIT_MESSAGE" value="pswrds" />
   </component>
 </project>
