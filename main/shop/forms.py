@@ -1,7 +1,8 @@
+
+
 from .models import Product
 from django import forms
-from .models import Image
-from django.forms import ModelForm, TextInput, ImageField
+from django.forms import ModelForm, TextInput, ImageField, DecimalField
 
 
 class ProductForm(ModelForm):
@@ -12,11 +13,3 @@ class ProductForm(ModelForm):
 
 
 
-
-
-
-class ImageForm(forms.ModelForm):
-    """Form for the image model"""
-    class Meta:
-        model = Image
-        fields = ('title', 'image')

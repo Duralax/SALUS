@@ -3,6 +3,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic import DeleteView, UpdateView
 from .forms import ProductForm
 from .models import Category, Product
+from . import forms
 
 
 def product_list(request, category_slug=None):
@@ -26,21 +27,21 @@ def product_detail(request, id):
 
 
 def product_create(request):
-    error = ''
+
     if request.method == 'POST':
-        form = ProductForm(request.POST)
+
+        form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
+
             img_obj = form.instance
             return render(request, 'product/product_create.html', {'form': form, 'img_obj': img_obj})
 
         else:
-            error: 'Форма заполнена некорректно'
+
+            form = forms.ProductForm()
+
     form = ProductForm()
 
-    data = {
-        'form': form,
-        'error': error
-    }
-    return render(request, 'product/product_create.html', data)
+    return render(request, 'product/product_create.html', {'form': form})
 
