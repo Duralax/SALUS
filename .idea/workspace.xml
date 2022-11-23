@@ -1,74 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e957e18-d3b8-46cd-9021-83663c43a5d4" name="Changes" comment="creation">
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/21/Screenshot_59.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/21/Screenshot_59_0NWWZ2n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/21/Screenshot_59_8ztVCgx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/21/Screenshot_59_IKGDoWD.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/21/Screenshot_59_SuEhIm9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/21/Screenshot_59_qTVox80.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/21/Screenshot_66.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/21/Screenshot_66_7ayQrps.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/21/Screenshot_66_HvaWrlI.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/21/Screenshot_66_WojNY4i.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/21/Screenshot_66_aj69aXe.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/21/Screenshot_66_u8Sn6z4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/21/Screenshot_68.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/21/Screenshot_68_9OgKH5t.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/21/Screenshot_71.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/21/Screenshot_71_H5R1hcI.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/21/df99ac63e73bdd18a63cf6765d018ea4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/21/df99ac63e73bdd18a63cf6765d018ea4_9nw2zMA.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/21/df99ac63e73bdd18a63cf6765d018ea4_kZkNpYq.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/21/kap.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/21/shiz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/21/shiz_UbgUxPg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/21/vtf.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/21/vtf_w9AY7zQ.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/22/Screenshot_50.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/22/Screenshot_66.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/22/Screenshot_66_DS8m02R.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/22/Screenshot_66_ED9TDqa.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/22/Screenshot_66_EJDfNF8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/22/Screenshot_66_KXzD15O.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/22/Screenshot_66_MFAsb5o.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/22/Screenshot_66_Qb4DN43.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/22/Screenshot_68.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/22/Screenshot_68_XDZkS92.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/22/Screenshot_68_de7tPxv.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/22/Screenshot_68_mkgAUt5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/22/Screenshot_68_xyn3b1W.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/22/df99ac63e73bdd18a63cf6765d018ea4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/22/df99ac63e73bdd18a63cf6765d018ea4_4itxHkh.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/22/df99ac63e73bdd18a63cf6765d018ea4_HT5T5l0.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/22/df99ac63e73bdd18a63cf6765d018ea4_lRq1oYO.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/22/kap.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/22/kap_MoXxlIr.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/22/kap_UEbZEZm.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/22/kap_WZ6XF3m.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/22/shiz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/22/shiz_7cVTErS.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/22/shiz_NcuxCpk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/22/shiz_Q7NDo0f.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/22/shiz_b9Hk2HS.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/22/shiz_cY89U4d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/22/shiz_ebmlziC.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/22/shiz_oLUwMli.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/22/yl1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/22/yl1_DzzGhC9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/22/yl1_S7WLOaN.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/22/yl1_usozgyW.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/shop/migrations/0007_alter_image_image.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/shop/migrations/0008_delete_image_alter_product_image.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/shop/migrations/0009_alter_product_category_alter_product_description_and_more.py" afterDir="false" />
+    <list default="true" id="1e957e18-d3b8-46cd-9021-83663c43a5d4" name="Changes" comment="creation finalochka">
+      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/23/Screenshot_59.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/23/Screenshot_59_82bpMpG.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/23/Screenshot_68.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/templates/product/product_delete.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/main/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/shop/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/shop/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/shop/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/shop/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/main/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/main/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/shop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/shop/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/shop/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/shop/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/product/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/product/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/templates/product/product_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/product/product_create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/registration/password_change_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/registration/password_change_done.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/registration/password_change_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/registration/password_change_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/registration/password_reset_complete.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/registration/password_reset_complete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/registration/password_reset_confirm.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/registration/password_reset_confirm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/registration/password_reset_done" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/registration/password_reset_done.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,8 +31,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -111,11 +64,11 @@
       <recent name="C:\Users\uitye\PycharmProjects\SALUS\main\main" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\uitye\PycharmProjects\SALUS\main\templates" />
+      <recent name="C:\Users\uitye\PycharmProjects\SALUS\main\templates\product" />
       <recent name="C:\Users\uitye\PycharmProjects\SALUS\main\static\img" />
       <recent name="C:\Users\uitye\PycharmProjects\SALUS\main\static\css" />
-      <recent name="C:\Users\uitye\PycharmProjects\SALUS\main\templates" />
       <recent name="C:\Users\uitye\PycharmProjects\SALUS\main\static\js" />
-      <recent name="C:\Users\uitye\PycharmProjects\SALUS\main\static" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -176,7 +129,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668955894750</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="creation finalochka">
+      <created>1669060539084</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669060539084</updated>
+    </task>
+    <task id="LOCAL-00009" summary="creation finalochka">
+      <created>1669060572830</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1669060572830</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -198,6 +165,7 @@
     <MESSAGE value="products 2" />
     <MESSAGE value="pswrds" />
     <MESSAGE value="creation" />
-    <option name="LAST_COMMIT_MESSAGE" value="creation" />
+    <MESSAGE value="creation finalochka" />
+    <option name="LAST_COMMIT_MESSAGE" value="creation finalochka" />
   </component>
 </project>

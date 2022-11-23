@@ -27,7 +27,6 @@ def product_detail(request, id):
 
 
 def product_create(request):
-
     if request.method == 'POST':
 
         form = ProductForm(request.POST, request.FILES)
@@ -45,3 +44,15 @@ def product_create(request):
 
     return render(request, 'product/product_create.html', {'form': form})
 
+
+class ProductUpdateView(UpdateView):
+    model = Product
+    template_name = 'product/product_create.html'
+    form_class = ProductForm
+
+
+class ProductDeleteView(DeleteView):
+    model = Product
+
+    template_name = 'product/product_delete.html'
+    success_url = '/product/products'

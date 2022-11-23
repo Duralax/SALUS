@@ -1,6 +1,6 @@
 {%extends 'index.html'%}
 {% load static %}
-{% block title %}Форма добавления товара
+{% block title %}Удаление товара
 {% endblock %}
 
 {% block container %}
@@ -98,21 +98,16 @@ display: flex;
   align-items: center;
   min-height: 50vh;
                 ">
-    <br><h1>Форма добавления товара</h1><br>
+    <br><h1>Вы уверены, что хотите удалить товар: {{product.name}}?</h1><br>
+    <img width="400px" height="400px" src="{% if product.image %}{{ product.image.url }}{%else %}{% static 'img/no-image.png' %}{% endif %}" >
+
     <form method="POST" enctype='multipart/form-data'>
         {% csrf_token %}
-        {{ form.as_p }}<br>
-    <button class="btn btn-success" type="submit">Добавить товар</button>
+
+        <br>
+    <button class="btn btn-danger" type="submit">Удалить товар</button>
     </form>
-    {% if img_obj %}
 
-        <h3>Товар {{img_obj.name}}, успешно добавлен!</h3>
-    <img WIDTH="300PX" height="300px"  src="{% if img_obj.image %}{{ img_obj.image.url }}{% else %}
-{% static "img/no-image.png" %}{% endif %}
-">{% else %} <h3>Товар не добавлен</h3>
-
-
-{% endif %}
 
 </div>
 

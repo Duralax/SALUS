@@ -1,23 +1,29 @@
-{%extends 'index.html'%}
+{%extends 'index.html' %}
 {% load static %}
 {% block title %}Товары
 {% endblock %}
 
 {% block container %}
 
+<head>
+
+    <!-- Bootstrap core CSS -->
+    <!-- Custom styles for this template -->
+
+  </head>
 <a href="{% url 'myshop:product_create' %}" class="btn btn-primary">Добавить товар</a>
 
 <h3>Категория</h3>
 <ul>
 
-<li {% if not category %}class="selected"{% endif %}>
-<a href="{% url 'myshop:product_list' %}">Все</a>
-</li>
-{% for c in categories %}
-<li {% if category.slug == c.slug %}class="selected" {% endif %}>
-<a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
-</li>
-{% endfor %}
+    <li {% if not category %}class="selected"{% endif %}>
+    <a href="{% url 'myshop:product_list' %}">Все</a>
+    </li>
+    {% for c in categories %}
+    <li {% if category.slug == c.slug %}class="selected" {% endif %}>
+    <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
+    </li>
+    {% endfor %}
 </ul>
 
 
@@ -45,7 +51,10 @@
                     <br>
 
                 <a href=" http://127.0.0.1:8000/product/{{ product.id }} " class="btn btn-primary">Подробнее</a>
-            </div>
+                <a href="{%url 'myshop:product_delete' product.id %}" type="button" class="btn btn-danger">Удалить</a>
+
+                </div>
+
         </div>
     </div>
 

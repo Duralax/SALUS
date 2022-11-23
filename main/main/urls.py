@@ -26,7 +26,9 @@ urlpatterns = [
     path('product/', include('shop.urls', namespace='myshop')),
     path('authentication/', include('authentication.urls')),
     path('authentication/', include('django.contrib.auth.urls')),
+
 ]
+
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
