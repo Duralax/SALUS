@@ -1,27 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e957e18-d3b8-46cd-9021-83663c43a5d4" name="Changes" comment="creation finalochka">
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/23/Screenshot_59.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/23/Screenshot_59_82bpMpG.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/23/Screenshot_68.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/templates/product/product_delete.html" afterDir="false" />
+    <list default="true" id="1e957e18-d3b8-46cd-9021-83663c43a5d4" name="Changes" comment="delete">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/main/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/main/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/main/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/shop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/shop/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/shop/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/shop/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/templates/product/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/product/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/product/product_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/product/product_create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/registration/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/registration/password_change_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/registration/password_change_done.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/registration/password_change_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/registration/password_change_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/registration/password_reset_complete.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/registration/password_reset_complete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/registration/password_reset_confirm.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/registration/password_reset_confirm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/registration/password_reset_done" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/registration/password_reset_done.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669060572830</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="delete">
+      <created>1669227887600</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1669227887600</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -166,6 +158,7 @@
     <MESSAGE value="pswrds" />
     <MESSAGE value="creation" />
     <MESSAGE value="creation finalochka" />
-    <option name="LAST_COMMIT_MESSAGE" value="creation finalochka" />
+    <MESSAGE value="delete" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete" />
   </component>
 </project>
