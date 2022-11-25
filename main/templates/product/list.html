@@ -5,34 +5,40 @@
 
 {% block container %}
 
-<style>body{
+<style>
+body{
 	background: #ececec;
 }
 
 .content{
 	margin-top: 50px;
+    style="margin-top: 20px;"
 }
 .product {
-	background: #fff none repeat scroll 0 0;
+
 	border: 1px solid #c0c0c0;
-	height: 390px;
-	overflow: hidden;
-	padding: 25px 15px;
-	position: relative;
+
+
 	text-align: center;
 	transition: all 0.5s ease 0s;
 	margin-bottom: 20px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
 }
 .product:hover {
-	box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 5px 5px rgba(1, 0, 0, 0.25);
 }
-.product-img {
-	height: 200px;
+.btn:hover {
+	box-shadow: 0 2px 5px rgba(1, 1, 0, 1.45);
 }
-.product-title a {
+
+.list-group-item:hover{
+    background: #ececec;
+}
+
+.product-title  {
 	color: #000;
 	font-weight: 500;
-	text-transform: uppercase;
+
 }
 .product-desc {
     max-height: 60px;
@@ -41,7 +47,7 @@
 .product-price {
 	bottom: 15px;
 	left: 0;
-	position: absolute;
+
 	width: 100%;
 	color: #d51e08;
 	font-size: 18px;
@@ -56,22 +62,20 @@
   </head>
 
 
+<div class="d-flex">
 
 
-
-    <div class="container content" >
+    <div class="container content position-fixed" style="margin-left: 20px; min-width:20rem;" >
         <div class="row">
-            <div class="col-md-4">
-
-                <div class="list-group">
-                    <h3 class="list-group-item list-group-item-action border-0 active">Категории:</h3>
-                    <a class="list-group-item " {% if not category %}class="selected"{% endif %} href="{% url 'myshop:product_list' %}">Все</a>
+            <div class="col-3 list-group" >
+                    <h3 class="list-group-item list-group-item-action border-0 active" style="background: #212529; margin-bottom: -2px;">Категории:</h3>
+                    <a class="list-group-item list-group-item-action" {% if not category %}class="selected"{% endif %} href="{% url 'myshop:product_list' %}">Все</a>
                     {% for c in categories %}
-        <a href="{{ c.get_absolute_url }}" class="list-group-item " {% if category.slug == c.slug %}class="selected" {% endif %}>{{ c.name }}</a>
+        <a href="{{ c.get_absolute_url }}" class="list-group-item list-group-item-action" {% if category.slug == c.slug %}class="selected" {% endif %}>{{ c.name }}</a>
 
         {% endfor %}
 
-                </div>
+
             </div>
 
         </div>
@@ -82,44 +86,53 @@
 
 
 
-    <center>
-        <h1 >{% if category %}{{ category.name }}{% else %}Товары{% endif %}</h1><br><br>
-{% for product in products %}
+<div class="col-md-9" style="margin-left: 370px;">
+
+        <center>
+        <h1 class=" position-sticky" style="margin-top: 20px;">{% if category %}{{ category.name }}{% else %}Все категории{% endif %}</h1><br><br>
+        </center>
+        {% for product in products %}
 
 
-<div class="card col-md-8 products  " style="width: 442px;
-                  text-align: center;
+        <div class="card product " style="width: 302px; height: 440px;
+                          text-align: center;
+                          display: inline-block;
+                          margin: 15px;">
 
-                  display: inline-block;
-                  margin: 15px;">
-    <div calss="card-header ">
-        <span class="font-weight-bold"><h4>{{ product.name }}</h4></span>
-        <div class="card-body">
-            <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
-            data-mdb-ripple-color="light">
-            <a href="http://127.0.0.1:8000/product/{{ product.id }} ">
-                    <img  width="400px" height="350px" src="{% if product.image %}{{ product.image.url }}{%else %}{% static 'img/no-image.png' %}{% endif %}" >
-            </a></div>
-            <div>
-                <a href="http://127.0.0.1:8000/product/{{ product.id }} ">{{ post.product.name }}</a>
+            <div calss="card-header ">
+                <span class="font-weight-bold product-title"><h4>{{ product.name }}</h4></span>
+                <div class="card-body">
+                    <div class="bg-image"
+                    data-mdb-ripple-color="light">
+                    <a href="http://127.0.0.1:8000/product/{{ product.id }} ">
+                            <img  width="220px" height="210px" src="{% if product.image %}{{ product.image.url }}{%else %}{% static 'img/no-image.png' %}{% endif %}" >
+                    </a></div>
+                    <div>
+                        <a href="http://127.0.0.1:8000/product/{{ product.id }} ">{{ post.product.name }}</a>
 
-                <br>
-                Количество: {{ product.amount }}<br>
-                ₽{{ product.price }}
-                    <br>
+                        <br>
+                        Количество: {{ product.amount }}<br>
+                        ₽{{ product.price }}
+                            <br>
 
-                <a href=" http://127.0.0.1:8000/product/{{ product.id }} " class="btn btn-primary">Подробнее</a>
-                <a href="{%url 'myshop:product_delete' product.id %}" type="button" class="btn btn-danger">Удалить</a>
+                        <a href=" http://127.0.0.1:8000/product/{{ product.id }} " class="btn btn-primary" style="margin-bottom: 10px;">Подробнее</a><br>
+
+                        <!-- ДОБАВИТЬ ЗДЕСЬ ПРОВЕРКУ ПОЛЬЗОВАТЕЛЯ НА ДОСТУП -->
+
+                        <a href="{%url 'myshop:product_update' product.id %}" type="button" class="btn btn-success">Изменить</a>
+                        <a href="{%url 'myshop:product_delete' product.id %}" type="button" class="btn btn-danger">Удалить</a>
+
+                        </div>
 
                 </div>
+            </div>
 
         </div>
-    </div>
+
+        {% endfor %}
+
 
 </div>
-
-{% endfor %}
-        </center>
 </div>
 
 
