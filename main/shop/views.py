@@ -1,9 +1,11 @@
 from django.contrib.messages.views import SuccessMessageMixin
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic import DeleteView, UpdateView
-from .forms import ProductForm
-from .models import Category, Product
 from . import forms
+from .forms import ProductForm
+from cart.forms import CartAddProductForm
+from .models import Category, Product
+
 
 
 def product_list(request, category_slug=None):
@@ -23,7 +25,9 @@ def product_list(request, category_slug=None):
 
 def product_detail(request, id):
     product = get_object_or_404(Product, id=id)
-    return render(request, 'product/detail.html', {'product': product})
+    cart_product_form = CartAddProductForm()
+    return render(request, 'product/detail.html', {'product': product,
+                                                        'cart_product_form': cart_product_form})
 
 
 def product_create(request):

@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+
+{% block title %}Спасибо за заказ{% endblock %}
+
+{% block container %}
+<center>
+    <h1>Спасибо за заказ</h1>
+    <p>Ваш заказ успешно оформлен. Номер вашего заказа:
+        <strong>{{ order.id }}</strong>.</p><br>
+    <h5><a href="{% url 'home' %}">На главную</a></h5><h5> <a href="{% url 'myshop:product_list' %}">Товары</a></h5>
+</center>
+{% endblock %}

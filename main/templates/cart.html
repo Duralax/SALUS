@@ -1,0 +1,110 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block title %}
+{{ product.name }}
+{% endblock %}
+{% block container %}
+
+{% csrf_token %}
+
+<style>
+  .hidden{
+	display: none!important;
+}
+.form-field{
+	width:250px;
+	display: inline-block;
+	padding: 5px;
+}
+.col-lg-4, .col-lg-6, .col-lg-8, .col-lg-12{
+	margin-top: 10px;
+}
+.thumbnail{
+	width: 100%;
+	height: 200px;
+	-webkit-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
+    -moz-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
+    box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
+}
+body{
+	background-color: hsl(0, 0%, 98%);
+}
+
+h1,h2,h3,h4,h5,h6{
+	color:hsl(0, 0%, 30%);
+}
+
+.box-element{
+	box-shadow:hsl(0, 0%, 80%) 0 0 16px;
+	background-color: #fff;
+	border-radius: 4px;
+	padding: 10px;
+
+}
+.thumbnail{
+	width: 100%;
+	height: 200px;
+	-webkit-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
+    -moz-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
+    box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
+}
+.chg-quantity{
+	width: 12px;
+	cursor: pointer;
+	display: block;
+	margin-top: 5px;
+	transition:.1s;
+}
+
+.chg-quantity:hover{
+	opacity: .6;
+}
+.btn:hover {
+	box-shadow: 0 2px 5px rgba(1, 1, 0, 1.45);
+}
+
+</style>
+
+<div class="row">
+  <div class="col-lg-12">
+    <div class="box-element">
+      <a class="btn btn-outline-dark" href="{% url 'myshop:product_list' %}">&#x2190; Вернутья к списку товаров</a><a href="{% url 'orders:order_create' %}" style="float:right; " class="btn btn-success" href="">Оформить заказ</a>
+    </div>
+    <br> <br>
+    <table class="table">
+		<tr>
+			<th><h5>Items: <strong>{% with total_items=cart|length %} {{ total_items }} {% endwith %} </strong></h5></th>
+			<th><h5>Total: <strong> {{ cart.get_total_price }} Руб.</strong></h5></th>
+		</tr>
+	</table>
+    <div class="box-element">
+      <div class="cart-row">
+          <div style="flex:2"></div>
+          <div style="flex:2"><strong>Товар</strong></div>
+          <div style="flex:1"><strong>Количество</strong></div>
+          <div style="flex:1"><strong>Удалить товар</strong></div>
+          <div style="flex:1"><strong>Цена за штуку</strong></div>
+          <div style="flex:1"><strong>Всего</strong></div>
+      </div>
+        {% for item in  cart %}
+            {% with product=item.product %}
+             <div class="cart-row" style="align: center;">
+                  <div style="flex:2"> <img height="50" width="100" class="row-image" src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no-image.png" %}{% endif %}" >  </div>
+                  <div style="flex:2">{{product.name}} </div>
+                  <div style="flex:1"> {{ item.quantity }} </div>
+                  <div style="flex:1"><a class="btn btn-danger" href="{% url 'cart:cart_remove' product.id%}">Удалить</a></div>
+                  <div style="flex:1">{{ item.price }} Руб.</div>
+                  <div style="flex:1">{{ item.total_price }} Руб.</div>
+
+      </div>
+        {% endwith %}
+        {% endfor %}
+
+    </div>
+
+  </div>
+</div>
+
+
+
+{% endblock container %}

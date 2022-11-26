@@ -4,21 +4,87 @@
 {{ product.name }}
 {% endblock %}
 {% block container %}
+<style>
+.row {
+    --bs-gutter-x: 1.25rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) / -2);
+    margin-left: calc(var(--bs-gutter-x) / -2);
+}
+.gallery-wrap {
+    display: block;
+    text-align: center;
 
-<div class="product-detail">
-<img src="{% if product.image %}{{ product.image.url }}{% else %}
-{% static "img/no-image.png" %}{% endif %}">
-<h1>{{ product.name }}</h1>
-<h2>
-<a href="{{ product.category.get_absolute_url }}">{{product.category }}</a>
-</h2>
-    <p class="price"><h3>Цена: ₽{{ product.price }}</h3></p>
-{{ product.description|linebreaks }}
-    Количество: {{ product.amount }}
+
+    margin-bottom: 1rem;
+    overflow: hidden;
+    background-color: #fff;
+
+}
+@media (min-width: 992px)
+.col-lg-6 {
+    flex: 0 0 auto;
+    width: 50%;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+{% csrf_token %}
+</style>
+<br>
+<h4  style="margin-left: 20px;"><a href="{% url 'home' %}">Главная</a> / <a href="{% url 'myshop:product_list' %}">Товары</a> / <a href="{{ product.category.get_absolute_url }}">{{product.category }}</a> / {{ product.name }}</h4>
+<br><br>
+<section class="padding-y bg-white shadow-sm">
+    <div class="container">
+        <div class="row">
+            <!--Левая сторона у detail-->
+            <aside class="col-lg-6">
+                <article class="gallery-wrap" >
+                    <img width="540px" height="510px" src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no-image.png" %}{% endif %}">
+                    </article>
+            </aside>
+            <!--Правая сторона у detail-->
+            <div class="col-lg-6">
+                <article class="ps-lg-3">
+                    <H3 class="title text-dark"> {{ product.name }} </H3><BR>
+                    <div class="mb-3">
+                        <h5>Цена: ₽ {{ product.price }}</h5>
+                    <form action="{% url 'cart:cart_add' product.id %}" method="post">
+                        {{ cart_product_form }}
+                        {% csrf_token %}
+                        <input type="submit" value="Add to cart">
+                    </form>
+
+                    </div>
+                    <p><H5>Описание и спецификация:</H5>
+                        {{ product.description|linebreaks }}
+                    </p>
+                    <hr>
+                    <h5>Количество:</h5> {{ product.amount }}
+
+                        <hr>
+                        <a href="{%url 'myshop:product_update' product.id %}" type="button" class="btn btn-success">Изменить</a>
+                        <a href="{%url 'myshop:product_delete' product.id %}" type="button" class="btn btn-danger">Удалить</a>
+
+                </article>
+            </div>
 
 
-       {% csrf_token %}
-       <button class="btn btn-danger" type="submit" >Удалить</button>
+        </div>
+    </div>
+</section>
 
-</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
 {% endblock container %}
