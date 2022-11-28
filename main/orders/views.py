@@ -10,8 +10,6 @@ def order_create(request):
 
     if request.method == 'POST':
         form = OrderCreateForm(request.POST)
-
-
         if form.is_valid():
             order = form.save()
 
@@ -29,3 +27,6 @@ def order_create(request):
         form = OrderCreateForm
     return render(request, 'order.html',
                   {'cart': cart, 'form': form})
+
+
+

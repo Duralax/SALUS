@@ -77,6 +77,8 @@ h1,h2,h3,h4,h5,h6{
 			<th><h5>Total: <strong> {{ cart.get_total_price }} Руб.</strong></h5></th>
 		</tr>
 	</table>
+      {% if cart|length  == 0 %}  <center><h1 style="margin-top: 140px; margin-bottom: 200px;">Ваша корзина пока пуста</h1></center>
+      {% else %}
     <div class="box-element">
       <div class="cart-row">
           <div style="flex:2"></div>
@@ -90,16 +92,16 @@ h1,h2,h3,h4,h5,h6{
             {% with product=item.product %}
              <div class="cart-row" style="align: center;">
                   <div style="flex:2"> <img height="50" width="100" class="row-image" src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no-image.png" %}{% endif %}" >  </div>
-                  <div style="flex:2">{{product.name}} </div>
-                  <div style="flex:1"> {{ item.quantity }} </div>
-                  <div style="flex:1"><a class="btn btn-danger" href="{% url 'cart:cart_remove' product.id%}">Удалить</a></div>
+                  <div style="flex:2">{{ product.name }} </div>
+                  <div style="flex:1"><a href="{% url 'cart:cart_minus_product' product.id %}" class="btn">-</a> {{ item.quantity }} <a href="{% url 'cart:cart_plus_product' product.id %}" class="btn">+</a></div>
+                  <div style="flex:1"><a class="btn btn-danger" href="{% url 'cart:cart_remove' product.id %}">Удалить</a></div>
                   <div style="flex:1">{{ item.price }} Руб.</div>
                   <div style="flex:1">{{ item.total_price }} Руб.</div>
 
       </div>
         {% endwith %}
         {% endfor %}
-
+        {% endif %}
     </div>
 
   </div>

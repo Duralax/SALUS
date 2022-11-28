@@ -53,7 +53,6 @@ class Cart(object):
         # получение объектов product и добавление их в корзину
         products = Product.objects.filter(id__in=product_ids)
 
-
         for product in products:
             self.cart[str(product.id)]['product'] = product
 
@@ -79,3 +78,19 @@ class Cart(object):
         # удаление корзины из сессии
         del self.session[settings.CART_SESSION_ID]
         self.session.modified = True
+
+    def product_plus(self, product):
+
+        product_id = str(product.id)
+        if product_id in self.cart:
+            self.cart[product_id]['quantity'] += 1
+        self.save()
+
+    def product_minus(self, product):
+        product_id = str(product.id)
+        if product_id in self.cart:
+            if self.cart[product_id]['quantity'] <= 1:
+                self.remove(product)
+            else:
+                self.cart[product_id]['quantity'] -= 1
+        self.save()
