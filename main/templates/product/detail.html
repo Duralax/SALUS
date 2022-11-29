@@ -24,6 +24,9 @@
     background-color: #fff;
 
 }
+.btn:hover {
+	box-shadow: 0 2px 5px rgba(1, 1, 0, 1.45);
+}
 @media (min-width: 992px)
 .col-lg-6 {
     flex: 0 0 auto;
@@ -33,7 +36,10 @@ p {
     margin-top: 0;
     margin-bottom: 1rem;
 }
-{% csrf_token %}
+.inpt_class{
+    width: 40px;
+}
+
 </style>
 <br>
 <h4  style="margin-left: 20px;"><a href="{% url 'home' %}">Главная</a> / <a href="{% url 'myshop:product_list' %}">Товары</a> / <a href="{{ product.category.get_absolute_url }}">{{product.category }}</a> / {{ product.name }}</h4>
@@ -56,7 +62,7 @@ p {
                     <form action="{% url 'cart:cart_add' product.id %}" method="post">
                         {{ cart_product_form }}
                         {% csrf_token %}
-                        <input type="submit" value="Add to cart">
+                        <input class="btn btn-outline-success" type="submit" value="Add to cart">
                     </form>
 
                     </div>

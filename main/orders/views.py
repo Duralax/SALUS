@@ -5,6 +5,7 @@ from cart.cart import Cart
 from .models import Product
 
 
+
 def order_create(request):
     cart = Cart(request)
 
@@ -18,7 +19,8 @@ def order_create(request):
                 OrderItem.objects.create(order=order,
                                          product=item['product'],
                                          price=item['price'],
-                                         quantity=item['quantity'])
+                                         quantity=item['quantity'],
+                                         user=request.user)
             # очистка корзины
             cart.clear()
             return render(request, 'order_created.html',
@@ -28,5 +30,14 @@ def order_create(request):
     return render(request, 'order.html',
                   {'cart': cart, 'form': form})
 
+
+def orders(request):
+    orders = OrderItem.objects.all()
+    user_orders = []
+    for order in orders:
+        if order.user == request.user:
+            user_orders.append(order)
+    context = {'orders': user_orders}
+    return render(request, 'user_orders.html', context)
 
 
