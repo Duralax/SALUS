@@ -73,6 +73,15 @@ body{
     <div class="container content position-fixed" style="margin-left: 20px; min-width:20rem;" >
         <div class="row">
             <div class="col-3 list-group" >
+
+
+                <a class="btn btn-primary" href="{% url 'myshop:product_create' %}">Добавить товар</a><br>
+
+                <form action="{% url 'myshop:search_results' %}"  method="get" class="col-12 mb-3 mb-lg-0 me-lg-3">
+                                {% csrf_token %}
+
+                            <input type="search" name="q" class="form-control form-input form-control-dark" placeholder="Поиск по товарам" aria-label="Search" >
+                    </form><br>
                     <h3 class="list-group-item list-group-item-action border-0 active" style="background: #212529; margin-bottom: -2px;">Категории:</h3>
                     <a class="list-group-item list-group-item-action" {% if not category %}class="selected"{% endif %} href="{% url 'myshop:product_list' %}">Все</a>
                     {% for c in categories %}
@@ -84,6 +93,7 @@ body{
             </div>
 
         </div>
+
     </div>
 
 

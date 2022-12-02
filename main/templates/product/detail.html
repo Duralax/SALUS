@@ -42,8 +42,19 @@ p {
 
 </style>
 <br>
-<h4  style="margin-left: 20px;"><a href="{% url 'home' %}">Главная</a> / <a href="{% url 'myshop:product_list' %}">Товары</a> / <a href="{{ product.category.get_absolute_url }}">{{product.category }}</a> / {{ product.name }}</h4>
-<br><br>
+<h4>
+<nav aria-label="breadcrumb" style="margin-left: 20px;">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{% url 'home' %}">Главная</a></li>
+      <li class="breadcrumb-item"><a href="{% url 'myshop:product_list' %}">Список товаров</a></li>
+    <li class="breadcrumb-item"><a href="{{ product.category.get_absolute_url }}">{{product.category }}</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{ product.name }}</li>
+  </ol>
+</nav>
+</h4>
+
+<hr><br>
+
 <section class="padding-y bg-white shadow-sm">
     <div class="container">
         <div class="row">

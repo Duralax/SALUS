@@ -1,5 +1,6 @@
+from django.http import HttpRequest
 from django.shortcuts import render
-from .models import OrderItem
+from .models import OrderItem, Order
 from .forms import OrderCreateForm
 from cart.cart import Cart
 from .models import Product
@@ -16,8 +17,7 @@ def order_create(request):
 
             for item in cart:
 
-                OrderItem.objects.create(order=order,
-                                         product=item['product'],
+                OrderItem.objects.create(product=item['product'],
                                          price=item['price'],
                                          quantity=item['quantity'],
                                          user=request.user)
@@ -31,13 +31,23 @@ def order_create(request):
                   {'cart': cart, 'form': form})
 
 
-def orders(request):
-    orders = OrderItem.objects.all()
-    user_orders = []
-    for order in orders:
-        if order.user == request.user:
-            user_orders.append(order)
-    context = {'orders': user_orders}
-    return render(request, 'user_orders.html', context)
+#def orders(request):
+    #orders = Order.objects.all()
+    #order_items = OrderItem.objects.all()
+    #user_order_items = []
+   # for order in order_items:
+    #    if order.user == request.user:
+#
+ #           user_order_items.append(order)
+  #  context = {'order_items': user_order_items}
+   # return render(request, 'user_orders.html', context)
+
+
+def my_orders(request):
+    products = Product.objects.all()
+    myorders = Order.objects.filter(user_id=request.user)
+    product_ordered = OrderItem.objects.all()
+    assert isinstance(request, HttpRequest)
+    return render(request, 'user_orders.html', {'products': products, 'product_ordered': product_ordered, 'myorders': myorders, })
 
 

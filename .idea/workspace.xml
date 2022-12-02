@@ -1,18 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e957e18-d3b8-46cd-9021-83663c43a5d4" name="Changes" comment="cart done">
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/11/28/kap.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/orders/migrations/0002_orderitem_user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/templates/user_orders.html" afterDir="false" />
+    <list default="true" id="1e957e18-d3b8-46cd-9021-83663c43a5d4" name="Changes" comment="orders">
+      <change afterPath="$PROJECT_DIR$/main/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/media/product/2022/12/01/unnamed.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/media/product/2022/12/01/yl.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/media/product/2022/12/03/434234342.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/media/product/2022/12/03/434234342_6LZAWsO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/media/product/2022/12/03/Screenshot_40.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/media/product/2022/12/03/Screenshot_48.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/media/product/2022/12/03/Screenshot_74.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/orders/migrations/0003_remove_orderitem_order_order_order.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/templates/product/product_update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/templates/search_results.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/cart/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/cart/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/orders/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/orders/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/orders/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/orders/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/orders/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/orders/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/orders/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/orders/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/shop/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/shop/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/shop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/shop/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/shop/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/shop/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/templates/product/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/product/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/product/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/product/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/product/product_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/product/product_create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/user_orders.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/user_orders.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669661581521</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="orders">
+      <created>1669739218183</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1669739218183</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -197,6 +217,7 @@
     <MESSAGE value="product list done" />
     <MESSAGE value="cart + order" />
     <MESSAGE value="cart done" />
-    <option name="LAST_COMMIT_MESSAGE" value="cart done" />
+    <MESSAGE value="orders" />
+    <option name="LAST_COMMIT_MESSAGE" value="orders" />
   </component>
 </project>

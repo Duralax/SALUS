@@ -17,7 +17,7 @@ class OrderItem(models.Model):
 
 
 class Order(models.Model):
-    order = models.ForeignKey(OrderItem, on_delete=models.CASCADE, related_name='items')
+    order = models.ForeignKey(OrderItem, on_delete=models.CASCADE, related_name='items', null=True)
 
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)

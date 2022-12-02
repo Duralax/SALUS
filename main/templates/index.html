@@ -1,6 +1,6 @@
 {% load static %}
 
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
   <head>
     <title>SALUS</title>
     <!-- Bootstrap core CSS -->
@@ -26,7 +26,7 @@
 }
 
   #cart-icon{
-	width:25px;
+	width:35px;
 	display: inline-block;
 	margin-left: 15px;
 }
@@ -99,14 +99,32 @@ footer {
 
         </ul>
 
-        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-          <input type="search" class="form-control form-control-dark" placeholder="Поиск..." aria-label="Search">
-        </form>
+
         <div class="text-end" >
         {% if user.is_authenticated %}
 
           <div class=" d-flex">
+              <a href="{% url 'cart:cart' %}">
+          <img id="cart-icon" src="{% static 'img/cart.png' %}">
+        </a>
+       <h6><span class="badge bg-danger rounded-pill" >{% with total_items=cart|length %}
+        {% if cart|length > 0 %}
+                {{ total_items }}
+        {% else %}
+            0
+        {% endif %}
+
+    {% endwith %}</span>
+          </div></h6>
+
+        {% else %}
+          <a href="{% url 'login' %}" class="btn btn-outline-light me-2">Войти</a>
+          <a href="{% url 'signup' %}" class="btn btn-warning "  >Регистрация</a>
+          {% endif %}
+
+        </div>
             <div class="dropdown">
+
                     <button style="margin-left: 5px;" class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="true">
                     Профиль
                     </button>
@@ -119,24 +137,7 @@ footer {
                   </div>
 
             <a style="margin-left: 10px;" href="{% url 'logout' %}" class="btn btn-warning">Выход</a>
-            <a href="{% url 'cart:cart' %}">
-          <img  id="cart-icon" src="{% static 'img/cart.png' %}">
-        </a>
-       <p id="cart-total">{% with total_items=cart|length %}
-        {% if cart|length > 0 %}
-                {{ total_items }}
-        {% else %}
-            0
-        {% endif %}
-    {% endwith %}</p>
-          </div>
 
-        {% else %}
-          <a href="{% url 'login' %}" class="btn btn-outline-light me-2">Войти</a>
-          <a href="{% url 'signup' %}" class="btn btn-warning "  >Регистрация</a>
-          {% endif %}
-
-        </div>
       </div>
     </div>
 

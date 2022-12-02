@@ -1,0 +1,64 @@
+{%extends 'index.html' %}
+{% load static %}
+{% block title %}Товары
+{% endblock %}
+
+{% block container %}
+
+<div class="box-element">
+      <a class="btn btn-outline-dark" href="{% url 'myshop:product_list' %}" style="margin-top: 20px; margin-left: 20px;">&#x2190; Вернутья к списку товаров</a>
+    </div>
+<hr>
+
+<center>
+        <h1 style="margin-top: 10px;">Результаты поиска:</h1><br><br>
+        </center>
+<div class="col-9" style="margin-left: 370px;">
+
+        {% if object_list %}
+        {% for product in object_list %}
+    <div class="card product " style="width: 302px; height: 440px;
+                          text-align: center;
+                          display: inline-block;
+                          margin: 15px;">
+
+            <div calss="card-header ">
+                <span class="font-weight-bold product-title"><h4>{{ product.name }}</h4></span>
+                <div class="card-body">
+                    <div class="bg-image"
+                    data-mdb-ripple-color="light">
+                    <a href="http://127.0.0.1:8000/product/{{ product.id }} ">
+                            <img  width="220px" height="210px" src="{% if product.image %}{{ product.image.url }}{%else %}{% static 'img/no-image.png' %}{% endif %}" >
+                    </a></div>
+                    <div>
+                        <a href="http://127.0.0.1:8000/product/{{ product.id }} ">{{ post.product.name }}</a>
+
+                        <br>
+                        Количество: {{ product.amount }}<br>
+                        ₽{{ product.price }}
+                            <br>
+
+                        <a href=" http://127.0.0.1:8000/product/{{ product.id }} " class="btn btn-primary" style="margin-bottom: 10px;">Подробнее</a><br>
+
+                        <!-- ДОБАВИТЬ ЗДЕСЬ ПРОВЕРКУ ПОЛЬЗОВАТЕЛЯ НА ДОСТУП -->
+
+                        <a href="{%url 'myshop:product_update' product.id %}" type="button" class="btn btn-success">Изменить</a>
+                        <a href="{%url 'myshop:product_delete' product.id %}" type="button" class="btn btn-danger">Удалить</a>
+
+                        </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        {% endfor %}
+    {% else %}
+        <br>
+        <h1 class="text-center" style="margin-top: 10px; margin-right: 250px;">Не найдено ни одного товара</h1><br><br>
+    {% endif %}
+</div>
+<br>
+<br><br><br><br>
+
+{% endblock container %}

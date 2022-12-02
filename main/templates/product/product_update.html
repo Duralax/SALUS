@@ -1,6 +1,6 @@
 {%extends 'index.html'%}
 {% load static %}
-{% block title %}Форма добавления товара
+{% block title %}Форма обновления товара
 {% endblock %}
 
 {% block container %}
@@ -98,18 +98,18 @@ display: flex;
   align-items: center;
   min-height: 50vh;
                 ">
-    <br><h1>Форма добавления товара</h1><br>
+    <br><h1>Форма изменения товара</h1><br>
     <form method="POST" enctype='multipart/form-data'>
         {% csrf_token %}
         {{ form.as_p }}<br>
-    <button class="btn btn-success" type="submit">Добавить товар</button>
+    <button class="btn btn-success" type="submit">Изменить товар</button>
     </form>
     {% if img_obj %}
 
-        <h3 class="text-success">Товар {{img_obj.name}}, успешно добавлен!</h3>
+        <h3 class="text-success">Товар {{img_obj.name}}, успешно изменен!</h3>
     <img WIDTH="300PX" height="300px"  src="{% if img_obj.image %}{{ img_obj.image.url }}{% else %}
 {% static "img/no-image.png" %}{% endif %}
-">{% else %} <h3 class="text-danger">Товар не добавлен!</h3>
+">{% else %} <h3 class="text-danger">Товар не изменен!</h3>
 
 
 {% endif %}

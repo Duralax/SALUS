@@ -1,6 +1,8 @@
+
+from django.db.models import Q
 from django.contrib.messages.views import SuccessMessageMixin
 from django.shortcuts import render, get_object_or_404, redirect
-from django.views.generic import DeleteView, UpdateView
+from django.views.generic import DeleteView, UpdateView, ListView
 from . import forms
 from .forms import ProductForm
 from cart.forms import CartAddProductForm
@@ -51,7 +53,7 @@ def product_create(request):
 
 class ProductUpdateView(UpdateView):
     model = Product
-    template_name = 'product/product_create.html'
+    template_name = 'product/product_update.html'
     form_class = ProductForm
 
 
@@ -60,3 +62,15 @@ class ProductDeleteView(DeleteView):
 
     template_name = 'product/product_delete.html'
     success_url = '/product/products'
+
+
+class SearchResultsView(ListView):
+    model = Product
+    template_name = 'search_results.html'
+
+    def get_queryset(self):
+        query = self.request.GET.get('q')
+        object_list = Product.objects.filter(
+            Q(name__icontains=query)
+        )
+        return object_list
