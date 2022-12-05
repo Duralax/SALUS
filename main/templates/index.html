@@ -46,7 +46,7 @@ header {
 padding-top: 60px;
 }
 footer {
-  padding-top: 60p;
+  padding-top: 60px;
   position: relative;
   bottom: 0;
 }
@@ -89,7 +89,7 @@ footer {
     <div class="container ">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <a href="/" class=" d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-          <img src="{% static '/img/spng.png' %}" class="bi me-2" width="100" height="40" style="margin-right:100pxS" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></img>
+          <img src="{% static '/img/spng.png' %}" class="bi me-2" width="100" height="40" style="margin-right:100pxS" role="img" aria-label="Bootstrap">
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
@@ -104,22 +104,22 @@ footer {
         {% if user.is_authenticated %}
 
           <div class=" d-flex">
+
               <a href="{% url 'cart:cart' %}">
           <img id="cart-icon" src="{% static 'img/cart.png' %}">
         </a>
+              <h6><span class="badge bg-danger rounded-pill" >
+                {% if cart|length > 0 %}{% with total_items=cart|length %}
+                        {{ total_items }}{% endwith %}
+                {% else %}
+                    0
+                {% endif %}
 
-       <h6><span class="badge bg-danger rounded-pill" >
-            {% if cart|length > 0 %}
-                    {{ total_items }}
-            {% else %}
-                0
-            {% endif %}
-       </span></h6>
+    </span></h6>
+
           </div>
-
-
-        </div>
-            <div class="dropdown">
+          </div>
+        <div class="dropdown">
 
                     <button style="margin-left: 5px;" class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="true">
                     Профиль
@@ -135,11 +135,16 @@ footer {
             <a style="margin-left: 10px;" href="{% url 'logout' %}" class="btn btn-warning">Выход</a>
 
       </div>
-    </div>
-        {% else %}
-          <a href="{% url 'login' %}" class="btn btn-outline-light me-2">Войти</a>
-          <a href="{% url 'signup' %}" class="btn btn-warning "  >Регистрация</a>
+         {% else %}
+                  <a href="{% url 'login' %}" class="btn btn-outline-light me-2">Войти</a>
+                  <a href="{% url 'signup' %}" class="btn btn-warning"  >Регистрация</a>
             {% endif %}
+   </div>
+
+
+
+
+
 
 
   </header>
@@ -165,5 +170,5 @@ footer {
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  </body>
+
 </html>
