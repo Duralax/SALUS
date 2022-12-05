@@ -2,23 +2,9 @@ from authentication.models import CustomUser
 from django.db import models
 from shop.models import Product
 
-class OrderItem(models.Model):
-
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='order_items')
-    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE, null=True, blank=True)
-    price = models.DecimalField(max_digits=10, decimal_places=2)
-    quantity = models.PositiveIntegerField(default=1)
-
-    def __str__(self):
-        return '{}'.format(self.id)
-
-    def get_cost(self):
-        return self.price * self.quantity
-
 
 class Order(models.Model):
-    order = models.ForeignKey(OrderItem, on_delete=models.CASCADE, related_name='items', null=True)
-
+    order = models.JSONField(unique=False)
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     email = models.EmailField()
@@ -39,6 +25,3 @@ class Order(models.Model):
 
     def get_total_cost(self):
         return sum(item.get_cost() for item in self.items.all())
-
-
-

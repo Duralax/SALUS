@@ -46,7 +46,7 @@ header {
 padding-top: 60px;
 }
 footer {
-  padding-top: 60p;
+  padding-top: 60px;
   position: relative;
   bottom: 0;
 }
@@ -107,20 +107,16 @@ footer {
               <a href="{% url 'cart:cart' %}">
           <img id="cart-icon" src="{% static 'img/cart.png' %}">
         </a>
-       <h6><span class="badge bg-danger rounded-pill" >{% with total_items=cart|length %}
-        {% if cart|length > 0 %}
-                {{ total_items }}
-        {% else %}
-            0
-        {% endif %}
+       <h6><span class="badge bg-danger rounded-pill" >
+                {% if cart|length > 0 %}
+                        {{ total_items }}
+                {% else %}
+                    0
+                {% endif %}
 
-    {% endwith %}</span>
-          </div></h6>
+    </span></h6></div>
 
-        {% else %}
-          <a href="{% url 'login' %}" class="btn btn-outline-light me-2">Войти</a>
-          <a href="{% url 'signup' %}" class="btn btn-warning "  >Регистрация</a>
-          {% endif %}
+
 
         </div>
             <div class="dropdown">
@@ -139,6 +135,10 @@ footer {
             <a style="margin-left: 10px;" href="{% url 'logout' %}" class="btn btn-warning">Выход</a>
 
       </div>
+         {% else %}
+                  <a href="{% url 'login' %}" class="btn btn-outline-light me-2">Войти</a>
+                  <a href="{% url 'signup' %}" class="btn btn-warning"  >Регистрация</a>
+            {% endif %}
     </div>
 
   </header>
