@@ -1,25 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e957e18-d3b8-46cd-9021-83663c43a5d4" name="Changes" comment="search">
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/12/05/45645.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/12/05/aedweerq.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/12/05/gtrgrt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/templates/user_update.html" afterDir="false" />
+    <list default="true" id="082e46ef-1fc1-4b99-ba66-dc7158da1631" name="Changes" comment="prodcts desc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/authentication/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/authentication/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/authentication/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/authentication/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/authentication/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/authentication/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/main/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/shop/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/shop/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/shop/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/shop/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/shop/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/shop/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/product/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/product/detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/templates/product/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/product/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/product/product_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/product/product_create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/search_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/search_results.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670017806949</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="prodcts desc">
+      <created>1670266411976</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1670266411976</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -220,6 +212,7 @@
     <MESSAGE value="cart done" />
     <MESSAGE value="orders" />
     <MESSAGE value="search" />
-    <option name="LAST_COMMIT_MESSAGE" value="search" />
+    <MESSAGE value="prodcts desc" />
+    <option name="LAST_COMMIT_MESSAGE" value="prodcts desc" />
   </component>
 </project>
