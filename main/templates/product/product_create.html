@@ -85,7 +85,10 @@ input[type=text] {
     width: 100%;
     font-size: 22px;
   }
-
+textarea {
+    wrap: on;
+    cols: 10;
+}
 
 </style>
 
@@ -99,9 +102,12 @@ display: flex;
   min-height: 50vh;
                 ">
     <br><h1>Форма добавления товара</h1><br>
-    <form method="POST" enctype='multipart/form-data'>
+    <form  method="POST" enctype='multipart/form-data'>
         {% csrf_token %}
-        {{ form.as_p }}<br>
+
+        <div class="text-break">
+            <p class="text-break">
+                {{ form.as_p }}</p></div>
     <button class="btn btn-success" type="submit">Добавить товар</button>
     </form>
     {% if img_obj %}

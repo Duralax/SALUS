@@ -54,8 +54,7 @@ p {
 </h4>
 
 <hr><br>
-
-<section class="padding-y bg-white shadow-sm">
+<div class="d-flex">
     <div class="container">
         <div class="row">
             <!--Левая сторона у detail-->
@@ -65,36 +64,44 @@ p {
                     </article>
             </aside>
             <!--Правая сторона у detail-->
-            <div class="col-lg-6">
-                <article class="ps-lg-3">
+
+            <div class="col-6" >
+
+
                     <H3 class="title text-dark"> {{ product.name }} </H3><BR>
+                    <div class="">
                     <div class="mb-3">
                         <h5>Цена: ₽ {{ product.price }}</h5>
-                    <form action="{% url 'cart:cart_add' product.id %}" method="post">
+                    <form  style="margin-top: 10px; margin-left: 14px; font-size: 19px;" action="{% url 'cart:cart_add' product.id %}" method="post">
                         {{ cart_product_form }}
                         {% csrf_token %}
-                        <input class="btn btn-outline-success" type="submit" value="Add to cart">
+                        <br>
+                        <input class="btn btn-outline-success" style="margin-top: 10px;" type="submit" value="Добавить в корзину">
                     </form>
-
                     </div>
-                    <p><H5>Описание и спецификация:</H5>
-                        {{ product.description|linebreaks }}
-                    </p>
+                    </div>
+                    <H5 >Описание и спецификация:</H5>
+
+                        <p style=
+"width:600px; word-wrap:break-word;">{{ product.description }}</p>
+
                     <hr>
-                    <h5>Количество:</h5> {{ product.amount }}
+                    <h5>Количество:</h5> {{ product.amount|linebreaks }}
 
                         <hr>
                         <a href="{%url 'myshop:product_update' product.id %}" type="button" class="btn btn-success">Изменить</a>
                         <a href="{%url 'myshop:product_delete' product.id %}" type="button" class="btn btn-danger">Удалить</a>
 
-                </article>
+
             </div>
 
 
         </div>
     </div>
-</section>
 
+
+
+</div>
 <br>
 <br>
 <br>

@@ -24,7 +24,7 @@ class Category(models.Model):
 
 class Product(models.Model):
     category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE, verbose_name='Категория')#CASCADE - чтобы ругался на удаление категории
-    name = models.CharField(max_length=150, db_index=True, verbose_name='Название товара')
+    name = models.CharField(max_length=50, db_index=True, verbose_name='Название товара')
     description = models.TextField(max_length=1000, blank=True, verbose_name='Описание и спецификация')
     price = models.FloatField( validators=[MinValueValidator(Decimal('0.01'))], verbose_name='Цена')
     amount = models.FloatField(verbose_name='Количество')

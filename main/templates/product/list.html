@@ -40,10 +40,7 @@ body{
 	font-weight: 500;
 
 }
-.product-desc {
-    max-height: 60px;
-    overflow: hidden;
-}
+
 .product-price {
 	bottom: 15px;
 	left: 0;
@@ -74,8 +71,8 @@ body{
         <div class="row">
             <div class="col-3 list-group" >
 
-
-                <a class="btn btn-primary" href="{% url 'myshop:product_create' %}">Добавить товар</a><br>
+                {% if authentication.role == '1' %}
+                <a class="btn btn-primary" href="{% url 'myshop:product_create' %}">Добавить товар</a><br>{% else %} не манагер {% endif %}
 
                 <form action="{% url 'myshop:search_results' %}"  method="get" class="col-12 mb-3 mb-lg-0 me-lg-3">
                                 {% csrf_token %}
@@ -101,7 +98,7 @@ body{
 
 
 
-<div class="col-md-9" style="margin-left: 370px;">
+<div class="col-md-9 " style="margin-left: 370px;">
 
         <center>
         <h1 class=" position-sticky" style="margin-top: 20px;margin-right: 60px;">{% if category %}{{ category.name }}{% else %}Все категории{% endif %}</h1><br><br>
@@ -109,23 +106,23 @@ body{
         {% for product in products %}
 
 
-        <div class="card product " style="width: 302px; height: 440px;
+        <div class="card product col-md-3" style="width: 405px; height: 580px;
                           text-align: center;
                           display: inline-block;
                           margin: 15px;">
 
-            <div calss="card-header ">
-                <span class="font-weight-bold product-title"><h4>{{ product.name }}</h4></span>
-                <div class="card-body">
-                    <div class="bg-image"
-                    data-mdb-ripple-color="light">
+            <div calss="card-header " >
+
+                <div class="card-body" style="position: relative">
+
                     <a href="http://127.0.0.1:8000/product/{{ product.id }} ">
-                            <img  width="220px" height="210px" src="{% if product.image %}{{ product.image.url }}{%else %}{% static 'img/no-image.png' %}{% endif %}" >
-                    </a></div>
+                            <img  width="320px" height="310px" src="{% if product.image %}{{ product.image.url }}{%else %}{% static 'img/no-image.png' %}{% endif %}" >
+                    </a><br><br>
+                    <h6 class="card-title text-break" style="max-width:400px;">{{ product.name|linebreaks }}</h6>
                     <div>
                         <a href="http://127.0.0.1:8000/product/{{ product.id }} ">{{ post.product.name }}</a>
 
-                        <br>
+
                         Количество: {{ product.amount }}<br>
                         ₽{{ product.price }}
                             <br>

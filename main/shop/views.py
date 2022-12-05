@@ -9,7 +9,6 @@ from cart.forms import CartAddProductForm
 from .models import Category, Product
 
 
-
 def product_list(request, category_slug=None):
     category = None
     categories = Category.objects.all()
@@ -59,7 +58,6 @@ class ProductUpdateView(UpdateView):
 
 class ProductDeleteView(DeleteView):
     model = Product
-
     template_name = 'product/product_delete.html'
     success_url = '/product/products'
 

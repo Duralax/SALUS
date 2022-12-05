@@ -4,6 +4,51 @@
 {% endblock %}
 
 {% block container %}
+<style>
+body{
+	background: #ececec;
+}
+
+.content{
+	margin-top: 50px;
+    style="margin-top: 20px;"
+}
+.product {
+
+	border: 1px solid #c0c0c0;
+
+
+	text-align: center;
+	transition: all 0.5s ease 0s;
+	margin-bottom: 20px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+.product:hover {
+    box-shadow: 0 5px 5px 5px rgba(1, 0, 0, 0.25);
+}
+.btn:hover {
+	box-shadow: 0 2px 5px rgba(1, 1, 0, 1.45);
+}
+
+.list-group-item:hover{
+    background: #ececec;
+}
+
+.product-title  {
+	color: #000;
+	font-weight: 500;
+
+}
+
+.product-price {
+	bottom: 15px;
+	left: 0;
+
+	width: 100%;
+	color: #d51e08;
+	font-size: 18px;
+	font-weight: 500;
+}</style>
 
 <div class="box-element">
       <a class="btn btn-outline-dark" href="{% url 'myshop:product_list' %}" style="margin-top: 20px; margin-left: 20px;">&#x2190; Вернутья к списку товаров</a>
@@ -11,26 +56,26 @@
 <hr>
 
 <center>
-        <h1 style="margin-top: 10px;">Результаты поиска:</h1><br><br>
+        <h1 style="margin-top: 10px;">Результаты поиска по товарам:</h1><br><br>
         </center>
 <div class="col-9" style="margin-left: 370px;">
 
         {% if object_list %}
         {% for product in object_list %}
-    <div class="card product " style="width: 302px; height: 440px;
+    <div class="card product " style="width: 302px; height: 480px;
                           text-align: center;
                           display: inline-block;
                           margin: 15px;">
 
             <div calss="card-header ">
-                <span class="font-weight-bold product-title"><h4>{{ product.name }}</h4></span>
+                <h5 class="card-title" style="">{{ product.name|linebreaks }}</h5>
                 <div class="card-body">
                     <div class="bg-image"
                     data-mdb-ripple-color="light">
                     <a href="http://127.0.0.1:8000/product/{{ product.id }} ">
                             <img  width="220px" height="210px" src="{% if product.image %}{{ product.image.url }}{%else %}{% static 'img/no-image.png' %}{% endif %}" >
                     </a></div>
-                    <div>
+                    <div class="card-text">
                         <a href="http://127.0.0.1:8000/product/{{ product.id }} ">{{ post.product.name }}</a>
 
                         <br>
