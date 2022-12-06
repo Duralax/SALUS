@@ -12,7 +12,7 @@ body{
 
 .content{
 	margin-top: 50px;
-    style="margin-top: 20px;"
+    margin-top: 50px;
 }
 .product {
 
@@ -40,8 +40,6 @@ body{
 	font-weight: 500;
 
 }
-<<<<<<< HEAD
-
 .product-price {
 	bottom: 15px;
 	left: 0;
@@ -75,7 +73,11 @@ body{
             <div class="col-3 list-group" >
 
                 {% if user.role == 1 %}
-                <a class="btn btn-primary" href="{% url 'myshop:product_create' %}">Добавить товар</a><br>{% else %} не манагер {% endif %}
+                <a class="btn btn-primary" href="{% url 'myshop:product_create' %}">Добавить товар</a>
+                <br>
+                <a class="btn btn-primary" href="{% url 'myshop:category_create' %}">Добавить категорию</a>
+                {% else %} не манагер {% endif %}
+
 
                 <form action="{% url 'myshop:search_results' %}"  method="get" class="col-12 mb-3 mb-lg-0 me-lg-3">
                                 {% csrf_token %}
@@ -133,10 +135,10 @@ body{
                         <a href=" http://127.0.0.1:8000/product/{{ product.id }} " class="btn btn-primary" style="margin-bottom: 10px;">Подробнее</a><br>
 
                         <!-- ДОБАВИТЬ ЗДЕСЬ ПРОВЕРКУ ПОЛЬЗОВАТЕЛЯ НА ДОСТУП -->
-
-                        <a href="{%url 'myshop:product_update' product.id %}" type="button" class="btn btn-success">Изменить</a>
-                        <a href="{%url 'myshop:product_delete' product.id %}" type="button" class="btn btn-danger">Удалить</a>
-
+                        {% if user.role == 1 %}
+                            <a href="{%url 'myshop:product_update' product.id %}" type="button" class="btn btn-success">Изменить</a>
+                            <a href="{%url 'myshop:product_delete' product.id %}" type="button" class="btn btn-danger">Удалить</a>
+                        {% endif %}
                         </div>
 
                 </div>

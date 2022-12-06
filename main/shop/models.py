@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import DO_NOTHING, CASCADE
 from django.urls import reverse
 from django.core.validators import MinValueValidator
 from decimal import Decimal
@@ -23,7 +24,7 @@ class Category(models.Model):
 
 
 class Product(models.Model):
-    category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE, verbose_name='Категория')#CASCADE - чтобы ругался на удаление категории
+    category = models.ForeignKey(Category, related_name='products', on_delete=CASCADE, verbose_name='Категория')
     name = models.CharField(max_length=50, db_index=True, verbose_name='Название товара')
     description = models.TextField(max_length=1000, blank=True, verbose_name='Описание и спецификация')
     price = models.FloatField( validators=[MinValueValidator(Decimal('0.01'))], verbose_name='Цена')

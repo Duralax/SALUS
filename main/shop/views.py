@@ -3,8 +3,10 @@ from django.db.models import Q
 from django.contrib.messages.views import SuccessMessageMixin
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic import DeleteView, UpdateView, ListView
+from transliterate import slugify, translit
+
 from . import forms
-from .forms import ProductForm
+from .forms import ProductForm, CategoryForm
 from cart.forms import CartAddProductForm
 from .models import Category, Product
 
@@ -48,6 +50,31 @@ def product_create(request):
     form = ProductForm()
 
     return render(request, 'product/product_create.html', {'form': form})
+
+
+def category_create(request):
+    if request.method == 'POST':
+
+        form = CategoryForm(request.POST)
+        if form.is_valid():
+            slug = translit(form['name'].value(), language_code='ru', reversed=True)
+            temp_slug = slug.split()
+            slug = '-'.join(temp_slug)
+            form.instance.slug = slug
+            form.save()
+
+            return render(request, 'product/category_create.html', {'form': form })
+
+        else:
+
+            form = forms.CategoryForm()
+
+    form = CategoryForm()
+
+    return render(request, 'product/category_create.html', {'form': form})
+
+
+
 
 
 class ProductUpdateView(UpdateView):
