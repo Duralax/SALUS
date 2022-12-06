@@ -73,19 +73,22 @@ h1,h2,h3,h4,h5,h6{
     <br> <br>
     <table class="table">
 		<tr>
-			<th><h5>Items: <strong>{% with total_items=cart|length %} {{ total_items }} {% endwith %} </strong></h5></th>
-			<th><h5>Total: <strong> {{ cart.get_total_price }} Руб.</strong></h5></th>
+			<th><h5>Всего товаров: <strong>{% with total_items=cart|length %} {{ total_items }} {% endwith %} </strong></h5></th>
+			<th><h5>Всего: <strong> {{ cart.get_total_price }} Руб.</strong></h5></th>
+
 		</tr>
 	</table>
+
       {% if cart|length  == 0 %}  <center><h1 style="margin-top: 140px; margin-bottom: 200px;">Ваша корзина пока пуста</h1></center>
       {% else %}
     <div class="box-element">
       <div class="cart-row">
-          <div style="flex:2"></div>
+          <div style="flex:2"><strong>Изображение</strong></div>
           <div style="flex:2"><strong>Товар</strong></div>
           <div style="flex:1"><strong>Количество</strong></div>
           <div style="flex:1"><strong>Удалить товар</strong></div>
           <div style="flex:1"><strong>Цена за штуку</strong></div>
+          <div style="flex:1"><strong>Оптовая / розничная цены</strong></div>
           <div style="flex:1"><strong>Всего</strong></div>
       </div>
         {% for item in  cart %}
@@ -96,6 +99,7 @@ h1,h2,h3,h4,h5,h6{
                   <div style="flex:1"><a href="{% url 'cart:cart_minus_product' product.id %}" class="btn">-</a> {{ item.quantity }} <a href="{% url 'cart:cart_plus_product' product.id %}" class="btn">+</a></div>
                   <div style="flex:1"><a class="btn btn-danger" href="{% url 'cart:cart_remove' product.id %}">Удалить</a></div>
                   <div style="flex:1">{{ item.price }} Руб.</div>
+                 <div style="flex:1">{% if item.quantity >= product.opt_price_if %} Оптовая {% else %} Розничная {% endif%}</div>
                   <div style="flex:1">{{ item.total_price }} Руб.</div>
 
       </div>

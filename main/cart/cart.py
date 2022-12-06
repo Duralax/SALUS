@@ -84,6 +84,9 @@ class Cart(object):
         product_id = str(product.id)
         if product_id in self.cart:
             self.cart[product_id]['quantity'] += 1
+            if self.cart[product_id]['quantity'] >= product.opt_price_if:
+                self.cart[product_id]['price'] = product.opt_price
+
         self.save()
 
     def product_minus(self, product):
@@ -93,4 +96,6 @@ class Cart(object):
                 self.remove(product)
             else:
                 self.cart[product_id]['quantity'] -= 1
+                if self.cart[product_id]['quantity'] < product.opt_price_if:
+                    self.cart[product_id]['price'] = product.price
         self.save()

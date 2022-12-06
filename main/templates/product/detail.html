@@ -71,7 +71,8 @@ p {
                     <H3 class="title text-dark"> {{ product.name }} </H3><BR>
                     <div class="">
                     <div class="mb-3">
-                        <h5>Цена: ₽ {{ product.price }}</h5>
+                        <h5>Цена в розницу: {{ product.price }} ₽ </h5>
+                        <h5 class="text-secondary">Оптовая цена: {{ product.opt_price }} ₽ при заказе от {{ product.opt_price_if }} штук</h5>
                     <form  style="margin-top: 10px; margin-left: 14px; font-size: 19px;" action="{% url 'cart:cart_add' product.id %}" method="post">
                         {{ cart_product_form }}
                         {% csrf_token %}

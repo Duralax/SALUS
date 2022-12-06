@@ -74,6 +74,10 @@ def category_create(request):
     return render(request, 'product/category_create.html', {'form': form})
 
 
+class CategoryDeleteView(DeleteView):
+    model = Category
+    template_name = 'product/product_delete.html'
+    success_url = '/product/products'
 
 
 

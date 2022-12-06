@@ -1,4 +1,4 @@
-import login as login
+
 from django.conf.global_settings import LOGIN_REDIRECT_URL
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
@@ -17,6 +17,8 @@ def cart_add(request, id):
     form = CartAddProductForm(request.POST)
     if form.is_valid():
         cd = form.cleaned_data
+        if cd['quantity'] >= product.opt_price_if:
+            product.price = product.opt_price
         cart.add(product=product,
                  quantity=cd['quantity'],
                  update_quantity=cd['update'])
