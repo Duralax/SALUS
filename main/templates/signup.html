@@ -8,11 +8,10 @@
               margin-top: 30px;
               margin-right: 300px;">
 
-  <form method="post mt-3" style="width: 500px; ">
+  <form method="post" style="width: 500px; ">
       {% csrf_token %}
     <h1>Пожалуйста зарегистрируйтесь</h1>
     <div class="bform py-5">
-
       {{ form|crispy }}</div>
     <br>
     <button class="btn btn-success" type="submit">Регистрация</button>

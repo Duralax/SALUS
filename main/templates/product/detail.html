@@ -72,13 +72,18 @@ p {
                     <div class="">
                     <div class="mb-3">
                         <h5>Цена в розницу: {{ product.price }} ₽ </h5>
-                        <h5 class="text-secondary">Оптовая цена: {{ product.opt_price }} ₽ при заказе от {{ product.opt_price_if }} штук</h5>
+                        <h5 class="text-secondary">Оптовая цена: {{ product.opt_price }} ₽ при заказе от {{ product.opt_price_if }} штук</h5><br>
+                        {% if user.is_authenticated %}
                     <form  style="margin-top: 10px; margin-left: 14px; font-size: 19px;" action="{% url 'cart:cart_add' product.id %}" method="post">
                         {{ cart_product_form }}
                         {% csrf_token %}
                         <br>
                         <input class="btn btn-outline-success" style="margin-top: 10px;" type="submit" value="Добавить в корзину">
                     </form>
+                        {% else %}
+                        Вы не вошли в аккаунт, поэтому не можете добавлять товары в корзину<br>
+                  <a href="{% url 'login' %}" >Войти</a> Или <a href="{% url 'signup' %}"   >Зарегистрироваться</a>
+            {% endif %}<br>
                     </div>
                     </div>
                     <H5 >Описание и спецификация:</H5>

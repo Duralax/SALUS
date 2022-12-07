@@ -12,24 +12,22 @@ def order_create(request):
 
 
     if request.method == 'POST':
-        try:
             object = models.Order.objects.get(user_id=request.user.pk)
             form = OrderCreateForm(request.POST)
             if form.is_valid():
                 order = form.save()
-
+                products = []
                 for item in cart:
+                    products.append(item)
 
-                    Order.objects.create(product=item,
-                                             price=item['price'],
-                                             quantity=item['quantity'],
-                                             user=request.user)
-
+                Order.objects.create(products=products,
+                                     price=item['price'],
+                                     quantity=item['quantity'],
+                                     user=request.user)
                 # очистка корзины
                 cart.clear()
                 return render(request, 'order_created.html',
                               {'order': order})
-        except:
             return render(request, 'order.html',
                           {'cart': cart, 'form': form})
     else:

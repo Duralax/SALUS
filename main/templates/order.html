@@ -65,9 +65,9 @@ h1,h2,h3,h4,h5,h6{
         </ul>
         <p>Итого: {{ cart.get_total_price }} Руб.</p>
     </div>
-    <form action="." method="post" class="order-form">
+    <form action="{}" method="post" class="order-form">
         {% csrf_token %}
-        {{ form.as_p }}
+        {{ form }}
         <p><input type="submit" value="Заказать"></p>
 
     </form>
