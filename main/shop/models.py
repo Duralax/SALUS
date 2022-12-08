@@ -27,7 +27,7 @@ class Product(models.Model):
     category = models.ForeignKey(Category, related_name='products', on_delete=CASCADE, verbose_name='Категория')
     name = models.CharField(max_length=50, db_index=True, verbose_name='Название товара')
     description = models.TextField(max_length=1000, blank=True, verbose_name='Описание и спецификация')
-    price = models.FloatField(validators=[MinValueValidator(Decimal('0.01'))], verbose_name='Цена')
+    price = models.FloatField(validators=[MinValueValidator(Decimal('0.001'))], verbose_name='Цена')
     opt_price = models.FloatField(validators=[MinValueValidator(Decimal('0.01'))], verbose_name='Оптовая цена',  blank=True, null=True)
     opt_price_if = models.FloatField(validators=[MinValueValidator(Decimal('0'))], default=10000, verbose_name='Количество, необходимое для оптовой цены', blank=True, null=True)
     amount = models.FloatField(verbose_name='Количество')
