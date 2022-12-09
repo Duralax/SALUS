@@ -9,10 +9,7 @@ from . import models
 
 def order_create(request):
     cart = Cart(request)
-
-
     if request.method == 'POST':
-            object = models.Order.objects.get(user_id=request.user.pk)
             form = OrderCreateForm(request.POST)
             if form.is_valid():
                 order = form.save()
@@ -20,7 +17,7 @@ def order_create(request):
                 for item in cart:
                     products.append(item)
 
-                Order.objects.create(products=products,
+                Order.objects.create(products,
                                      price=item['price'],
                                      quantity=item['quantity'],
                                      user=request.user)
@@ -50,8 +47,8 @@ def order_create(request):
 def my_orders(request):
     products = Product.objects.all()
     myorders = Order.objects.filter(user_id=request.user)
-    product_ordered = OrderItem.objects.all()
+
     assert isinstance(request, HttpRequest)
-    return render(request, 'user_orders.html', {'products': products, 'product_ordered': product_ordered, 'myorders': myorders, })
+    return render(request, 'user_orders.html', {'products': products,  'myorders': myorders, })
 
 
