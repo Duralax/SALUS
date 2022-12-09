@@ -8,24 +8,7 @@
 {% csrf_token %}
 
 <style>
-  .hidden{
-	display: none!important;
-}
-.form-field{
-	width:250px;
-	display: inline-block;
-	padding: 5px;
-}
-.col-lg-4, .col-lg-6, .col-lg-8, .col-lg-12{
-	margin-top: 10px;
-}
-.thumbnail{
-	width: 100%;
-	height: 200px;
-	-webkit-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
-    -moz-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
-    box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
-}
+
 body{
 	background-color: hsl(0, 0%, 98%);
 }
@@ -41,13 +24,28 @@ h1,h2,h3,h4,h5,h6{
 	padding: 10px;
 
 }
-.thumbnail{
-	width: 100%;
-	height: 200px;
-	-webkit-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
-    -moz-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
-    box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
+
+.btn:hover {
+	box-shadow: 0 2px 5px rgba(1, 1, 0, 1.45);
 }
+
+.cart-row{
+	display: flex;
+    align-items: flex-stretch;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ececec;
+
+}
+
+.quantity{
+	display: inline-block;
+	font-weight: 700;
+	padding-right:10px;
+
+
+}
+
 .chg-quantity{
 	width: 12px;
 	cursor: pointer;
@@ -59,16 +57,13 @@ h1,h2,h3,h4,h5,h6{
 .chg-quantity:hover{
 	opacity: .6;
 }
-.btn:hover {
-	box-shadow: 0 2px 5px rgba(1, 1, 0, 1.45);
-}
 
 </style>
 
 <div class="row">
   <div class="col-lg-12">
     <div class="box-element">
-      <a class="btn btn-outline-dark" href="{% url 'myshop:product_list' %}">&#x2190; Вернутья к списку товаров</a><a href="{% url 'orders:order_create' %}" style="float:right; " class="btn btn-success" href="">Оформить заказ</a>
+      <a class="btn btn-outline-dark" href="{% url 'myshop:product_list' %}">&#x2190; Вернутья к списку товаров</a><a href="{% url 'orders:order_create' %}" style="float:right; " class="btn btn-success">Оформить заказ</a>
     </div>
     <br> <br>
     <table class="table">
@@ -93,8 +88,8 @@ h1,h2,h3,h4,h5,h6{
       </div>
         {% for item in  cart %}
             {% with product=item.product %}
-             <div class="cart-row" style="align: center;">
-                  <div style="flex:2"> <img height="50" width="100" class="row-image" src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no-image.png" %}{% endif %}" >  </div>
+             <div class="cart-row" style="align-items: center;">
+                  <div style="flex:2"> <img height="50" width="100" class="row-image" src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no-image.png' %}{% endif %}" >  </div>
                   <div style="flex:2">{{ product.name }} </div>
                   <div style="flex:1"><a href="{% url 'cart:cart_minus_product' product.id %}" class="btn">-</a> {{ item.quantity }} <a href="{% url 'cart:cart_plus_product' product.id %}" class="btn">+</a></div>
                   <div style="flex:1"><a class="btn btn-danger" href="{% url 'cart:cart_remove' product.id %}">Удалить</a></div>

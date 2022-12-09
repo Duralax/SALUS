@@ -6,9 +6,6 @@ from django.db.models import CASCADE
 from shop.models import Product
 
 
-
-
-
 class Order(models.Model):
     ORD_STATUS = [
         (1, 'В обработке'),
