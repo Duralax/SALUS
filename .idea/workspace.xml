@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="082e46ef-1fc1-4b99-ba66-dc7158da1631" name="Changes" comment="prodcts desc">
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/12/09/кот.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/main/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/contacts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/production.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/production.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/orders/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/orders/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,11 +31,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\uitye\PycharmProjects\SALs\main\static\img" />
@@ -67,6 +62,7 @@
       <workItem from="1670298950990" duration="5228000" />
       <workItem from="1670305246999" duration="8440000" />
       <workItem from="1670387313968" duration="7618000" />
+      <workItem from="1670588488220" duration="31000" />
     </task>
     <task id="LOCAL-00001" summary="bootstrap header">
       <created>1665533812958</created>
@@ -203,7 +199,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
