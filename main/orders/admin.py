@@ -12,7 +12,7 @@ class OrderAdmin(admin.ModelAdmin):
                     'address', 'postal_code', 'city', 'paid',
                     'created', 'updated', 'status']
     list_filter = ['paid', 'created', 'updated','status']
-
+    model = Order
 
 
 admin.site.register(Order, OrderAdmin)

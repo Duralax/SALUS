@@ -103,9 +103,9 @@ display: flex;
 
     <form method="POST" enctype='multipart/form-data'>
         {% csrf_token %}
-        {% for item in  cart %}
-        <br>{% if product == item %}
-                <button class="btn btn-danger" type="submit">Удалить товар</button>{% else %} Вы не можете удалить товар, пока он находится в корзине{% endif %}{% endfor %}
+
+        <br>
+                <button class="btn btn-danger" type="submit">Удалить товар</button>
     </form>
 
 
