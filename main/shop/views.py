@@ -4,11 +4,13 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic import DeleteView, UpdateView, ListView
 from transliterate import slugify, translit
-
 from . import forms
 from .forms import ProductForm, CategoryForm
-from cart.forms import CartAddProductForm
+
 from .models import Category, Product
+from cart.forms import CartAddProductForm
+
+from main import settings
 
 
 def product_list(request, category_slug=None):
@@ -62,21 +64,30 @@ def category_create(request):
             slug = '-'.join(temp_slug)
             form.instance.slug = slug
             form.save()
-
-            return render(request, 'product/category_create.html', {'form': form })
+            return redirect('myshop:product_list')
 
         else:
 
             form = forms.CategoryForm()
 
     form = CategoryForm()
-
+    redirect('myshop:product_list')
     return render(request, 'product/category_create.html', {'form': form})
+
+class CategoryUpdateView(UpdateView):
+    model = Category
+    template_name = 'product/category_update.html'
+    form_class = CategoryForm
+    def slug_to_name(self):
+        slug = translit(self.name, language_code='ru', reversed=True)
+        temp_slug = slug.split()
+        slug = '-'.join(temp_slug)
+
 
 
 class CategoryDeleteView(DeleteView):
     model = Category
-    template_name = 'product/product_delete.html'
+    template_name = 'product/category_delete.html'
     success_url = '/product/products'
 
 
@@ -91,7 +102,9 @@ class ProductDeleteView(DeleteView):
     model = Product
     template_name = 'product/product_delete.html'
     success_url = '/product/products'
-
+    def delete_cart(self):
+        from main.cart import cart
+        cart.clear
 
 class SearchResultsView(ListView):
     model = Product

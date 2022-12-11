@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="082e46ef-1fc1-4b99-ba66-dc7158da1631" name="Changes" comment="ordz">
+      <change afterPath="$PROJECT_DIR$/main/templates/product/category_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/templates/product/category_update.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/main/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/orders/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/orders/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/product/product_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/product/product_delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/shop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/shop/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/shop/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/shop/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/product/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/product/list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +41,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\uitye\PycharmProjects\SALs\main\static\img" />
@@ -60,6 +78,7 @@
       <workItem from="1670305246999" duration="8440000" />
       <workItem from="1670387313968" duration="7618000" />
       <workItem from="1670588488220" duration="9603000" />
+      <workItem from="1670774342649" duration="6689000" />
     </task>
     <task id="LOCAL-00001" summary="bootstrap header">
       <created>1665533812958</created>
@@ -217,7 +236,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

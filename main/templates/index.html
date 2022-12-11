@@ -84,7 +84,7 @@ footer {
           <img id="cart-icon" src="{% static 'img/cart.png' %}">
         </a>
               <h6><span class="badge bg-danger rounded-pill" >
-                {% if cart|length > 0 %}{% with total_items=cart|length %}
+                {% if cart|length  > 0 %}{% with total_items=cart|length %}
                         {{ total_items }}{% endwith %}
                 {% else %}
                     0
