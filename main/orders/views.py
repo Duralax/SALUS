@@ -18,8 +18,10 @@ def order_create(request):
                 quantity = ''
                 count = 0
                 for item in cart:
-                    product_in_cart =  item.get('product')
+                    product_in_cart = item.get('product')
+                    print('===================', product_in_cart)
                     product = Product.objects.filter(id = product_in_cart.pk)[0]
+                    print('===================', product_in_cart.pk)
                     this_order.products.add(product)
                     price += item.get('price') * item.get('quantity')
                     if count == 0:
@@ -55,18 +57,24 @@ def order_create(request):
 
 def my_orders(request):
     myorders = Order.objects.filter(user=request.user)
+    print('===================', myorders)
     for order in myorders:
         quantity = order.quantity
         #print('===================', quantity)
         quantites = quantity.split(' ')
         products = []
-        count_products = len(order.products)
+        count_products = order.products
+        print('===================', count_products)
+        count_products = count_products.count()
+        print('===================', products)
         for i in range(count_products):
+            print('===================', products)
             products.append([order.products[i], quantites[i]])
+            print('===================', products)
 
     print('===================', products)
     #assert isinstance(request, HttpRequest)
-    #return render(request, 'user_orders.html', {'products': products,  'myorders': myorders, })
+    return render(request, 'user_orders.html', {'products': products,  'myorders': myorders, })
 
 
 

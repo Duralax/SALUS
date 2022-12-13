@@ -102,9 +102,9 @@ class ProductDeleteView(DeleteView):
     model = Product
     template_name = 'product/product_delete.html'
     success_url = '/product/products'
-    def delete_cart(self):
-        from main.cart import cart
-        cart.clear
+   # def delete_cart(self):
+    #    cart = Cart(self)
+     #   cart.remove(self, Product)
 
 class SearchResultsView(ListView):
     model = Product

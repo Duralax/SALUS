@@ -33,12 +33,21 @@
 
   .linkz {
 
-      padding-bottom: 5px;
-      }
+      --s: 0.15em;   /* the thickness of the line */
+  --c: #ffc32c; /* the color */
+
+  color: #0000;
+  padding-bottom: var(--s);
+  background:
+    linear-gradient(90deg,var(--c) 50%,#000 0) calc(100% - var(--_p,0%))/200% 100%,
+    linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
+  -webkit-background-clip: text,padding-box;
+          background-clip: text,padding-box;
+  transition: 0.3s;
+}
     .linkz:hover {
 
-      color: #154088;
-      border-bottom: .7px solid WHITE;
+      --_p: 100%
 
     }
 
@@ -130,11 +139,7 @@ footer {
 <div class="container navbar-fixed-bottom">
   <footer class="py-4 my-7 " >
     <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+
     </ul>
     <p class="text-center text-muted">&copy; Компания ООО "Салюс"</p>
   </footer>

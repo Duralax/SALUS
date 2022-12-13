@@ -78,7 +78,7 @@ body{
                 <a class="btn btn-success" href="{% url 'myshop:category_create' %}">Добавить категорию</a>
 
 
-                {% else %} не манагер {% endif %}
+                {% else %}  {% endif %}
 
 
                 <form action="{% url 'myshop:search_results' %}"  method="get" class="col-12 mb-3 mb-lg-0 me-lg-3">

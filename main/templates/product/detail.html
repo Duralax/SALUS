@@ -95,8 +95,10 @@ p {
                     <h5>Количество:</h5> {{ product.amount|linebreaks }}
 
                         <hr>
+                {% if user.role == 1 %}
                         <a href="{%url 'myshop:product_update' product.id %}" type="button" class="btn btn-success">Изменить</a>
                         <a href="{%url 'myshop:product_delete' product.id %}" type="button" class="btn btn-danger">Удалить</a>
+                {% else %}  {% endif %}
 
 
             </div>

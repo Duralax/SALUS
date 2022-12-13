@@ -98,6 +98,7 @@ display: flex;
   align-items: center;
   min-height: 50vh;
                 ">
+    {% if user.role == 1 %}
     <br><h1>Форма изменения товара</h1><br>
     <form method="POST" enctype='multipart/form-data'>
         {% csrf_token %}
@@ -114,6 +115,11 @@ display: flex;
 
 {% endif %}
 
+    {% else %}
+
+    <h1 class="text-bg-danger">У вас нет прав для выполнения данной функции!</h1>
+
+{% endif %}
 </div>
 
 
