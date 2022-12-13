@@ -65,14 +65,21 @@ h1,h2,h3,h4,h5,h6{
 
 </style>
 {% for item in  myorders %}
-{{ item.id }}
-             <div class="cart-row" style="align: center;">
-                  <div style="flex:2">{{ item.id }}</div>
-                  <div style="flex:2">  </div>
-                  <div style="flex:1"></div>
-                  <div style="flex:1"></div>
-                  <div style="flex:1"> </div>
-                  <div style="flex:1"> </div>
+             <div class="cart-row" style="align: center; display: flex;
+    align-items: flex-stretch;">
+                 <div style="flex:2">{{ item.id }}</div>
+
+                 <div style="flex:2"> {{ item.user }} </div>
+
+                 <div style="flex:1"> {{ item.status }}</div>
+
+                 <div style="flex:1"> {{ item.address }} </div>
+
+                 <div style="flex:1">Количество {{ item.quantity }} </div>
+                 {% for product in item.products %}
+                    <div style="flex:1">Название продукта {{ product.name }}  </div>
+                 {% endfor %}
+                  <div style="flex:1"> Итоговая цена {{ get_total_price }} </div>
 
       </div>
         {% endfor %}
