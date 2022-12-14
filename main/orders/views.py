@@ -17,17 +17,16 @@ def order_create(request):
                 price = 0
                 quantity = ''
                 count = 0
+
                 for item in cart:
                     product_in_cart = item.get('product')
-                    print('===================', product_in_cart)
                     product = Product.objects.filter(id = product_in_cart.pk)[0]
-                    print('===================', product_in_cart.pk)
                     this_order.products.add(product)
                     price += item.get('price') * item.get('quantity')
                     if count == 0:
-                        quantity += str(item.get('quantity'))
+                        quantity += str(product.pk) + ':' + str(item.get('quantity'))
                     else:
-                        quantity += ' ' + str(item.get('quantity'))
+                        quantity += ' ' + str(product.pk) + ':' + str(item.get('quantity'))
                     count += 1
                 this_order.price = int(price) #при изменении в бд убрать инт
                 this_order.quantity = quantity
@@ -43,38 +42,25 @@ def order_create(request):
     return render(request, 'order.html',
                   {'cart': cart, 'form': form})
 
-#def orders(request):
-    #orders = Order.objects.all()
-    #order_items = OrderItem.objects.all()
-    #user_order_items = []
-   # for order in order_items:
-    #    if order.user == request.user:
-#
- #           user_order_items.append(order)
-  #  context = {'order_items': user_order_items}
-   # return render(request, 'user_orders.html', context)
-
 
 def my_orders(request):
-    myorders = Order.objects.filter(user=request.user)
-    print('===================', myorders)
+    if request.user.role == 2:
+        myorders = Order.objects.filter(user=request.user)
+    else:
+        myorders = Order.objects.all()
+    orders = []
     for order in myorders:
         quantity = order.quantity
-        #print('===================', quantity)
-        quantites = quantity.split(' ')
+        str_quantites = quantity.split(' ')
         products = []
-        count_products = order.products
-        print('===================', count_products)
-        count_products = count_products.count()
-        print('===================', products)
-        for i in range(count_products):
-            print('===================', products)
-            products.append([order.products[i], quantites[i]])
-            print('===================', products)
+        for i in range(order.products.count()):
+            for j in range(len(str_quantites)):
+                temp = str_quantites[j].split(':')
+                if int(temp[0]) == order.products.all()[i].pk:
+                    products.append([order.products.all()[i], temp[1]])
 
-    print('===================', products)
-    #assert isinstance(request, HttpRequest)
-    return render(request, 'user_orders.html', {'products': products,  'myorders': myorders, })
+        orders.append([[order.pk, order.user, order.address, order.price, order.status], products])
+    return render(request, 'user_orders.html', {'orders': orders,})
 
 
 

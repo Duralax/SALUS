@@ -64,23 +64,31 @@ h1,h2,h3,h4,h5,h6{
 }
 
 </style>
-{% for item in  myorders %}
-             <div class="cart-row" style="align: center; display: flex;
-    align-items: flex-stretch;">
-                 <div style="flex:2">{{ item.id }}</div>
-
-                 <div style="flex:2"> {{ item.user }} </div>
-
-                 <div style="flex:1"> {{ item.status }}</div>
-
-                 <div style="flex:1"> {{ item.address }} </div>
-
-                 <div style="flex:1">Количество {{ item.quantity }} </div>
-                 {% for product in item.products %}
-                    <div style="flex:1">Название продукта {{ product.name }}  </div>
-                 {% endfor %}
-                  <div style="flex:1"> Итоговая цена {{ get_total_price }} </div>
-
+{% if orders %}
+{% for order in  orders %}
+<div class="container pt-3" style="">
+             <div class="cart-row pt-3">
+                 <div><strong>Заказ №{{ order.0.0 }}</strong> {% if user.role == 1 %} Пользователь - {{ order.0.1 }} {% endif %}<br> Адресс: {{order.0.2}} Сумма заказа: {{order.0.3}} руб. Статус заказа: {{order.0.4}}</div>
+                 <table class="table table-striped">
+                     <thead>
+                        <tr>
+                          <th scope="col">Наименование товара</th>
+                          <th scope="col">Количество</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      {% for product in order.1 %}
+                        <tr>
+                          <th scope="row">{{ product.0 }}</th>
+                          <td>{{ product.1 }}</td>
+                        </tr>
+                     {% endfor %}
+                </table>
       </div>
+</div>
         {% endfor %}
+{% else %}
+<div class="container"><center>Заказов нет!</center></div>
+{% endif %}
+<br><br><br><br>
 {% endblock %}

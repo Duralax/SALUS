@@ -5,22 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="082e46ef-1fc1-4b99-ba66-dc7158da1631" name="Changes" comment="order&#10;1">
-      <change afterPath="$PROJECT_DIR$/main/authentication/migrations/0003_alter_customuser_email.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/orders/migrations/0008_order_price_order_quantity_alter_order_status.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/authentication/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/authentication/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/authentication/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/authentication/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/main/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/orders/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/orders/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/orders/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/orders/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/shop/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/shop/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/order_created.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/order_created.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/product/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/product/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/product/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/product/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/product/product_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/product/product_update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/production.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/production.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/order.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/product/product_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/product/product_create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/product/product_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/product/product_delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/user_orders.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/user_orders.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,18 +41,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/main/templates/registration" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\PycharmProjects\SALUS\main\templates\registration" />
       <recent name="C:\Users\uitye\PycharmProjects\SALs\main\static\img" />
       <recent name="C:\Users\uitye\PycharmProjects\SALUS\main\main" />
     </key>
@@ -252,6 +240,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

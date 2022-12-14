@@ -98,6 +98,7 @@ display: flex;
   align-items: center;
   min-height: 50vh;
                 ">
+    {% if user.role == 1 %}
     <br><h1>Вы уверены, что хотите удалить товар: {{product.name}}?</h1><br>
     <img width="400px" height="400px" src="{% if product.image %}{{ product.image.url }}{%else %}{% static 'img/no-image.png' %}{% endif %}" >
 
@@ -107,7 +108,11 @@ display: flex;
         <br>
                 <button class="btn btn-danger" type="submit">Удалить товар</button>
     </form>
+{% else %}
 
+    <h1 class="text-bg-danger">У вас нет прав для выполнения данной функции!</h1>
+
+{% endif %}
 
 </div>
 

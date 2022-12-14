@@ -1,7 +1,6 @@
 {% extends 'index.html' %}
 {% load static %}
 
-
 {% block container %}
 
 {% csrf_token %}
@@ -49,11 +48,12 @@ h1,h2,h3,h4,h5,h6{
 }
 
 </style>
-{% block title %}Checkout{% endblock %}
+<div class="container mt-5">
+{% load crispy_forms_tags %}
 
-{% block content %}
-    <h1>Checkout</h1>
-    <div class="order-info">
+
+    <h1>Оформление заказа</h1>
+    <div class="order-info mt-3">
         <h3>Ваш заказ</h3>
         <ul>
             {% for item in cart %}
@@ -67,12 +67,13 @@ h1,h2,h3,h4,h5,h6{
     </div>
     <form action="{% url 'orders:order_create' %}" method="post" class="order-form">
         {% csrf_token %}
-        {{ form }}
-        <p><input type="submit" value="Заказать"></p>
+        {{ form|crispy }}
+        <br>
+        <p><input class="btn btn-success" type="submit" value="Заказать"></p>
 
     </form>
-{% endblock %}
 
 
 
+</div>
 {% endblock container %}
