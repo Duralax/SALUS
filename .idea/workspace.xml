@@ -4,42 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="082e46ef-1fc1-4b99-ba66-dc7158da1631" name="Changes" comment="orderы 90% done">
-      <change afterPath="$PROJECT_DIR$/main/media/product/2022/12/15/.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/orders/migrations/0009_remove_order_city_remove_order_paid_and_more.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/orders/migrations/0010_order_delivery.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/orders/migrations/0011_order_phone_alter_order_status.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/shop/migrations/0022_remove_product_amount.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/shop/migrations/0023_alter_product_price.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/shop/migrations/0024_alter_product_opt_price_if.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/shop/migrations/0025_alter_product_opt_price_if.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/shop/migrations/0026_alter_product_price.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/shop/migrations/0027_alter_product_opt_price.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/shop/migrations/0028_alter_product_opt_price.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/shop/migrations/0029_alter_product_opt_price.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/static/js/filter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/static/js/isotope.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/templates/user_orders_status.html" afterDir="false" />
+    <list default="true" id="082e46ef-1fc1-4b99-ba66-dc7158da1631" name="Changes" comment="orders 99% done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/main/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/main/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/main/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/orders/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/orders/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/orders/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/orders/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/orders/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/orders/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/orders/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/orders/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/orders/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/orders/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/shop/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/shop/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/shop/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/shop/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/order.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/order_created.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/order_created.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/product/category_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/product/category_create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/product/category_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/product/category_delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/product/category_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/product/category_update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/product/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/product/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/product/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/product/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/registration/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/templates/user_orders.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/user_orders.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -116,7 +84,7 @@
       <workItem from="1671111951176" duration="2784000" />
       <workItem from="1671131379852" duration="778000" />
       <workItem from="1671182599870" duration="10519000" />
-      <workItem from="1671194673365" duration="4821000" />
+      <workItem from="1671194673365" duration="7335000" />
     </task>
     <task id="LOCAL-00001" summary="bootstrap header">
       <created>1665533812958</created>
@@ -272,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671004194736</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="orders 99% done">
+      <created>1671200611028</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1671200611028</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,6 +285,7 @@
     <MESSAGE value="ordz" />
     <MESSAGE value="order&#10;1" />
     <MESSAGE value="orderы 90% done" />
-    <option name="LAST_COMMIT_MESSAGE" value="orderы 90% done" />
+    <MESSAGE value="orders 99% done" />
+    <option name="LAST_COMMIT_MESSAGE" value="orders 99% done" />
   </component>
 </project>

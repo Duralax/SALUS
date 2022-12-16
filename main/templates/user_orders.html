@@ -73,10 +73,11 @@ h1,h2,h3,h4,h5,h6{
 
     <div class="container pt-3 box order_obr"  style="">
                  <div class="cart-row pt-3">
-                     <div><strong>Заказ №{{ order.0.0 }}</strong> {% if user.role == 1 %} Пользователь - {{ order.0.1 }}
+                     <div><strong>Заказ №{{ order.0.0 }}</strong><br> Создан: {{ order.0.8 }} {% if user.role == 1 %} Пользователь - {{ order.0.1 }}
                          <br>Контактный телефон пользователя: {{ order.0.6 }}
                          <br>Почта пользователя:  {{ order.0.7 }}
-                         {% endif %}<br> Адресс: {{order.0.2}}<br> Сумма заказа: {{order.0.3}} руб.
+                         {% endif %}
+                         <br> Адресс: {{order.0.2}}<br> Сумма заказа: {{order.0.3}} руб.
                          <br> Способ доставки: {{ order.0.5 }}<br>
                          Статус заказа: <strong>{{order.0.4}}</strong> {% if user.role == 1 %} <a class="" href="{% url 'orders:status_update' order.0.0 %}">Изменить статус</a>{% endif %}
                      </div>

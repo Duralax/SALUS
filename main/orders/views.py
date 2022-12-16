@@ -61,7 +61,7 @@ def my_orders(request):
                 temp = str_quantites[j].split(':')
                 if int(temp[0]) == order.products.all()[i].pk:
                     products.append([order.products.all()[i], temp[1]])
-        orders.append([[order.pk, order.user, order.address, order.price, order.status, order.delivery, order.phone, order.email], products])
+        orders.append([[order.pk, order.user, order.address, order.price, order.status, order.delivery, order.phone, order.email, order.created, order.updated], products])
     return render(request, 'user_orders.html', {'orders': orders,})
 
 
