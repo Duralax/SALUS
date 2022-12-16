@@ -88,7 +88,7 @@ input[type=text] {
 
 
 </style>
-
+{% if user.role == 1 %}
 <div class="center" style="
                 display:inline-block;
 
@@ -109,6 +109,9 @@ display: flex;
 
 
 </div>
-
+{% else %}
+<center><h1 class="text-danger" style="margin-top: 250px;">
+    У вас нет прав</h1></center>
+{% endif %}
 
 {% endblock container %}

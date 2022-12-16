@@ -1,7 +1,10 @@
 from django.http import HttpRequest
 from django.shortcuts import render
+from django.urls import reverse
+from django.views.generic import UpdateView
+
 from .models import Order
-from .forms import OrderCreateForm
+from .forms import OrderCreateForm, OrderChangeForm
 from cart.cart import Cart
 from .models import Product
 from . import models
@@ -58,9 +61,17 @@ def my_orders(request):
                 temp = str_quantites[j].split(':')
                 if int(temp[0]) == order.products.all()[i].pk:
                     products.append([order.products.all()[i], temp[1]])
-
-        orders.append([[order.pk, order.user, order.address, order.price, order.status], products])
+        orders.append([[order.pk, order.user, order.address, order.price, order.status, order.delivery, order.phone, order.email], products])
     return render(request, 'user_orders.html', {'orders': orders,})
+
+
+class OrderChangeView(UpdateView):
+    model = Order
+    template_name = 'user_orders_status.html'
+    form_class = OrderChangeForm
+
+    def get_success_url(self):
+        return reverse('orders:orders_user')
 
 
 

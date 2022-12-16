@@ -130,22 +130,21 @@ body{
                     <a href="http://127.0.0.1:8000/product/{{ product.id }} ">
                             <img  width="320px" height="310px" src="{% if product.image %}{{ product.image.url }}{%else %}{% static 'img/no-image.png' %}{% endif %}" >
                     </a><br><br>
-                    <h6 class="card-title text-break" style="max-width:400px;">{{ product.name|linebreaks }}</h6>
+                    <h3 class="card-title text-break" style="max-width:400px;">{{ product.name|linebreaks }}</h3>
                     <div>
+                        <h1>
                         <a href="http://127.0.0.1:8000/product/{{ product.id }} ">{{ post.product.name }}</a>
+                        </h1>
+                        <p style="font-size: 20px;">Цена: ₽{{ product.price }}</p>
 
-
-                        Количество: {{ product.amount }}<br>
-                        ₽{{ product.price }}
-                            <br>
-
-                        <a href="http://127.0.0.1:8000/product/{{ product.id }}" class="btn btn-primary" style="margin-bottom: 10px;">Подробнее</a><br>
-
-                        <!-- ДОБАВИТЬ ЗДЕСЬ ПРОВЕРКУ ПОЛЬЗОВАТЕЛЯ НА ДОСТУП -->
                         {% if user.role == 1 %}
                             <a href="{%url 'myshop:product_update' product.id %}" type="button" class="btn btn-success">Изменить</a>
                             <a href="{%url 'myshop:product_delete' product.id %}" type="button" class="btn btn-danger">Удалить</a>
-                        {% endif %}
+                        {% endif %}<br><br>
+                        <a href="http://127.0.0.1:8000/product/{{ product.id }}" class="btn btn-primary" style="margin-bottom: 10px;">Подробнее</a>
+
+                        <!-- ДОБАВИТЬ ЗДЕСЬ ПРОВЕРКУ ПОЛЬЗОВАТЕЛЯ НА ДОСТУП -->
+
                         </div>
 
                 </div>

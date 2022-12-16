@@ -4,18 +4,24 @@
 {% block title %}Login{% endblock %}
 {% block container %}
 
-<main class="container" style="margin-left: 300px;
+<main style="margin-left: 450px;
               margin-top: 30px;
               margin-right: 300px;">
-  <h1 >Пожалуйста войдите</h1>
-  <form method="post">
+    <div class="row">
+<div class="container col-lg-12 offset-md-2" style="">
+  <form method="post" style="width: 600px; ">
       {% csrf_token %}
+    <h1>Пожалуйста войдите</h1>
+    <div class="bform py-5">
+      {{ form|crispy }}</div>
+    <center>
+    <button class="btn btn-success ml-2" style="width: 200px; font-size: 20px;" type="submit">Войти</button>
+<br><br>
+    <a href="{% url 'password_reset'%}" class="link-primary">Забыли пароль?</a></center>
 
-    {{ form|crispy }}
-    <br>
-    <button class="btn btn-success ml-2" type="submit">Войти</button>
 
-    <a href="{% url 'password_reset'%}" class="link-primary">Забыли пароль?</a>
   </form>
+
+</div></div>
 </main>
 {% endblock container %}

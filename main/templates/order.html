@@ -48,6 +48,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 </style>
+{% if user.role == 2 %}
 <div class="container mt-5">
 {% load crispy_forms_tags %}
 
@@ -58,8 +59,8 @@ h1,h2,h3,h4,h5,h6{
         <ul>
             {% for item in cart %}
                 <li>
-                    {{ item.quantity }}x {{ item.product.name }}
-                    <span>${{ item.total_price }}</span>
+                    {{ item.quantity }} x {{ item.product.name }}
+                    <span> - {{ item.total_price }} Руб.</span>
                 </li>
             {% endfor %}
         </ul>
@@ -73,7 +74,9 @@ h1,h2,h3,h4,h5,h6{
 
     </form>
 
-
-
 </div>
+{% else %}
+<center><h1 class="text-danger" style="margin-top: 250px;">
+    У вас нет прав</h1></center>
+{% endif %}
 {% endblock container %}

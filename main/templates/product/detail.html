@@ -65,45 +65,60 @@ p {
             </aside>
             <!--Правая сторона у detail-->
 
-            <div class="col-6" >
+            <div class="col-6" style="margin-top: 90px;">
 
 
                     <H3 class="title text-dark"> {{ product.name }} </H3><BR>
                     <div class="">
                     <div class="mb-3">
-                        <h5>Цена в розницу: {{ product.price }} ₽ </h5>
+                        <h5>Цена в розницу: {{ product.price }} ₽ </h5><br>
+                        {% if product.opt_price_if == 10000 %}
+                        Оптовая цена не предусмотрена<br><br>
+                        {% else %}
                         <h5 class="text-secondary">Оптовая цена: {{ product.opt_price }} ₽ при заказе от {{ product.opt_price_if }} штук</h5><br>
+                        {% endif %}
                         {% if user.is_authenticated %}
+                        {% if user.role == 1 %}
+                            Вы вошли, как менеджер, поэтому не можете добавлять товар в корзину
+                        {% else %}
                     <form  style="margin-top: 10px; margin-left: 14px; font-size: 19px;" action="{% url 'cart:cart_add' product.id %}" method="post">
                         {{ cart_product_form }}
                         {% csrf_token %}
                         <br>
                         <input class="btn btn-outline-success" style="margin-top: 10px;" type="submit" value="Добавить в корзину">
                     </form>
+                            {% endif %}
                         {% else %}
                         Вы не вошли в аккаунт, поэтому не можете добавлять товары в корзину<br>
+
                   <a href="{% url 'login' %}" >Войти</a> Или <a href="{% url 'signup' %}"   >Зарегистрироваться</a>
-            {% endif %}<br>
-                    </div>
-                    </div>
-                    <H5 >Описание и спецификация:</H5>
-
-                        <p style=
-"width:600px; word-wrap:break-word;">{{ product.description }}</p>
-
-                    <hr>
-                    <h5>Количество:</h5> {{ product.amount|linebreaks }}
-
-                        <hr>
-                {% if user.role == 1 %}
+            {% endif %}<br>{% if user.role == 1 %}
+                        <br><h4>Действие с товаром:</h4><br>
                         <a href="{%url 'myshop:product_update' product.id %}" type="button" class="btn btn-success">Изменить</a>
                         <a href="{%url 'myshop:product_delete' product.id %}" type="button" class="btn btn-danger">Удалить</a>
                 {% else %}  {% endif %}
+                    </div>
+                    </div>
+
+
+
+
+
+
+
 
 
             </div>
+            <br><br>
+            <br><br><br><br>
+            <br>
+            <br>
+            <div style="margin-left: 130px; margin-top: 70px;">
+<H3 >Описание и спецификация:</H3><br>
 
-
+                        <p style=
+"width:1000px; word-wrap:break-word; font-size: 20px;">{{ product.description }}</p>
+            </div>
         </div>
     </div>
 

@@ -3,6 +3,7 @@ from django.conf import settings
 from django.contrib.auth.models import User
 from django.db import models
 from django.db.models import CASCADE
+from phonenumber_field.modelfields import PhoneNumberField
 from shop.models import Product
 
 
@@ -12,7 +13,14 @@ class Order(models.Model):
         ('Сборка заказа', 'Сборка'),
         ('Заказ готов', 'Заказ готов'),
         ('Заказ завершен', 'Заказ завершен'),
-        ('Заказ отменен', 'Заказ отменен')
+        ('Заказ отменен', 'Заказ отменен'),
+        ('Заказ возвращен', 'Заказ возвращен')
+    ]
+
+    DELIVERY = [
+        ('Самовывоз', 'Самовывоз' ),
+        ('Доставка', 'Доставка')
+
     ]
 
     products = models.ManyToManyField(Product)
@@ -23,12 +31,11 @@ class Order(models.Model):
     quantity = models.CharField(max_length= 100, verbose_name='Количество', null=True)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete = models.DO_NOTHING, null=True)
     address = models.CharField(max_length=250)
-    postal_code = models.CharField(max_length=20)
-    city = models.CharField(max_length=100)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
-    paid = models.BooleanField(default=False)
+    delivery = models.CharField(("delivery"), choices=DELIVERY, default='Самовывоз', max_length=17)
     status = models.CharField(("status"), choices=ORD_STATUS, default='Обработка заказа', max_length=17)
+    phone = PhoneNumberField(verbose_name='Контактный телефон', null=True)
 
     class Meta:
         ordering = ('-created',)

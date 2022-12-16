@@ -1,6 +1,6 @@
 {%extends 'index.html'%}
 {% load static %}
-{% block title %}Форма добавления товара
+{% block title %}Форма обновления товара
 {% endblock %}
 
 {% block container %}
@@ -81,13 +81,10 @@ input[type=text] {
   min-height: 100vh;
   }
 
-textarea {
-    wrap: on;
-    cols: 10;
-}
+
 
 </style>
-{% if user.role == 1 %}
+
 <div class="center" style="
                 display:inline-block;
 
@@ -96,21 +93,24 @@ display: flex;
   justify-content: center;
   align-items: center;
   min-height: 50vh;
-                ">
-    <br><h1>Форма добавления категории</h1><br>
-    <form  method="POST" enctype='multipart/form-data'>
-        {% csrf_token %}
+             ">
 
-        <div class="text-break">
-            <p class="text-break">
-                {{ form.name }}</p></div>
-    <button class="btn btn-success" type="submit" style="width: 100%;">Добавить категорию</button>
+    {% if user.role == 1 %}
+
+    <br><h1>Изменение статуса заказа {{ order.id }}</h1><br>
+    <form method="POST" enctype='multipart/form-data'>
+        {% csrf_token %}
+        {{ form.as_p }}<br>
+    <button class="btn btn-success" type="submit" style="width: 100%;">Изменить статус заказа</button>
     </form>
 
-</div>
-{% else %}
-<center><h1 class="text-danger" style="margin-top: 250px;">
-    У вас нет прав</h1></center>
+
+    {% else %}
+
+    <h1 class="text-bg-danger">У вас нет прав для выполнения данной функции!</h1>
+
 {% endif %}
+</div>
+
 
 {% endblock container %}

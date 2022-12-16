@@ -9,7 +9,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ['name',  'price', 'amount', 'created', 'uploaded', 'category']
-    list_filter = ['amount', 'created', 'uploaded', 'category']
-    list_editable = ['price', 'amount', 'category']
+    list_display = ['name',  'price', 'created', 'uploaded', 'category']
+    list_filter = [ 'created', 'uploaded', 'category']
+    list_editable = ['price', 'category']
 
