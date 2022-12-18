@@ -118,23 +118,21 @@ body{
         {% for product in products %}
 
 
-        <div class="card product col-md-3" style="width: 405px; height: 580px;
+        <div class="card product col-md-3" style="width: 405px; height: 600px;
                           text-align: center;
                           display: inline-block;
-                          margin: 15px;">
+                          margin: 15px;  margin-top: 20px; overflow: auto;">
 
             <div calss="card-header " >
 
-                <div class="card-body" style="position: relative">
+                <div class="card-body"  >
 
                     <a href="http://127.0.0.1:8000/product/{{ product.id }} ">
                             <img  width="320px" height="310px" src="{% if product.image %}{{ product.image.url }}{%else %}{% static 'img/no-image.png' %}{% endif %}" >
                     </a><br><br>
-                    <h3 class="card-title text-break" style="max-width:400px;">{{ product.name|linebreaks }}</h3>
+                    <h5 class="card-title text-break" style="max-width:400px;">{{ product.name|linebreaks }}</h5>
                     <div>
-                        <h1>
-                        <a href="http://127.0.0.1:8000/product/{{ product.id }} ">{{ post.product.name }}</a>
-                        </h1>
+
                         <p style="font-size: 20px;">Цена: ₽{{ product.price }}</p>
 
                         {% if user.role == 1 %}

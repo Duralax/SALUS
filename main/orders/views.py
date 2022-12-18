@@ -31,7 +31,7 @@ def order_create(request):
                     else:
                         quantity += ' ' + str(product.pk) + ':' + str(item.get('quantity'))
                     count += 1
-                this_order.price = int(price) #при изменении в бд убрать инт
+                this_order.price = float(price) #при изменении в бд убрать инт
                 this_order.quantity = quantity
                 this_order.save()
 

@@ -11,5 +11,5 @@ class CustomUser(AbstractUser):
         (2, 'User'),
     ]
     email = models.EmailField()
-    age = models.PositiveIntegerField(default=0)
+
     role = models.PositiveSmallIntegerField(("role"), choices=ROLES, default=2)

@@ -137,10 +137,10 @@ body{
                         <a href=" http://127.0.0.1:8000/product/{{ product.id }} " class="btn btn-primary" style="margin-bottom: 10px;">Подробнее</a><br>
 
                         <!-- ДОБАВИТЬ ЗДЕСЬ ПРОВЕРКУ ПОЛЬЗОВАТЕЛЯ НА ДОСТУП -->
-
+{% if user.role == 1 %}
                         <a href="{%url 'myshop:product_update' product.id %}" type="button" class="btn btn-success list-group-ite">Изменить</a>
                         <a href="{%url 'myshop:product_delete' product.id %}" type="button" class="btn btn-danger list-group-ite">Удалить</a>
-
+{% endif %}
                         </div>
 
                 </div>

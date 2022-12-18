@@ -1,6 +1,9 @@
+from decimal import Decimal
+
 from authentication.models import CustomUser
 from django.conf import settings
 from django.contrib.auth.models import User
+from django.core.validators import MinValueValidator
 from django.db import models
 from django.db.models import CASCADE
 from phonenumber_field.modelfields import PhoneNumberField
@@ -24,13 +27,13 @@ class Order(models.Model):
     ]
 
     products = models.ManyToManyField(Product)
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
-    price = models.IntegerField( verbose_name='Общая цена', null=True)
+    first_name = models.CharField(max_length=50, verbose_name='Имя')
+    last_name = models.CharField(max_length=50, verbose_name='Фамилия')
+    price = models.DecimalField(validators=[MinValueValidator(Decimal('0.01'))], max_digits=10, decimal_places=2, verbose_name='Цена', null=True)
     email = models.EmailField()
     quantity = models.CharField(max_length= 100, verbose_name='Количество', null=True)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete = models.DO_NOTHING, null=True)
-    address = models.CharField(max_length=250)
+    address = models.CharField(max_length=250, verbose_name='Адрес')
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     delivery = models.CharField(("delivery"), choices=DELIVERY, default='Самовывоз', max_length=17)
