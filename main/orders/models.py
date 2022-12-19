@@ -36,7 +36,7 @@ class Order(models.Model):
     address = models.CharField(max_length=250, verbose_name='Адрес')
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
-    delivery = models.CharField(("delivery"), choices=DELIVERY, default='Самовывоз', max_length=17)
+    delivery = models.CharField(("delivery"), choices=DELIVERY, default='Доставка', max_length=17)
     status = models.CharField(("status"), choices=ORD_STATUS, default='Обработка заказа', max_length=17)
     phone = PhoneNumberField(verbose_name='Контактный телефон', null=True)
 

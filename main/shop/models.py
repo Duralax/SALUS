@@ -8,7 +8,7 @@ from decimal import Decimal
 
 
 class Category(models.Model):
-    name = models.CharField(max_length=100, db_index=True, unique=True)
+    name = models.CharField(max_length=100, db_index=True, unique=True, verbose_name='Название категории')
     slug = models.SlugField(max_length=100, unique=True)
 
     class Meta:

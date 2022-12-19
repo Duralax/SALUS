@@ -4,24 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="082e46ef-1fc1-4b99-ba66-dc7158da1631" name="Changes" comment="99.9% done">
-      <change afterPath="$PROJECT_DIR$/main/authentication/migrations/0004_remove_customuser_age.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/orders/migrations/0012_alter_order_price.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/orders/migrations/0013_alter_order_price.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/orders/migrations/0014_remove_order_quantity.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/orders/migrations/0016_alter_order_address_alter_order_first_name_and_more.py" afterDir="false" />
+    <list default="true" id="082e46ef-1fc1-4b99-ba66-dc7158da1631" name="Changes" comment="done ?!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/authentication/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/authentication/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/authentication/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/authentication/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/cart/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/cart/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/main/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/orders/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/orders/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/orders/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/orders/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/order.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/product/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/product/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/product/product_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/product/product_create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/registration/password_change_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/registration/password_change_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/search_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/search_results.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/shop/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/shop/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/product/category_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/product/category_create.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,19 +39,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Пользователи/Desktop/SALUS/SALUS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Пользователи/Desktop/SALUS/SALUS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\PycharmProjects\SALUS\main\templates\registration" />
@@ -102,6 +90,8 @@
       <workItem from="1671280828036" duration="2823000" />
       <workItem from="1671368210972" duration="3755000" />
       <workItem from="1671372829209" duration="8646000" />
+      <workItem from="1671391469952" duration="205000" />
+      <workItem from="1671454466979" duration="2523000" />
     </task>
     <task id="LOCAL-00001" summary="bootstrap header">
       <created>1665533812958</created>
@@ -271,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671204059351</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="done ?!">
+      <created>1671391487298</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1671391487298</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,6 +308,7 @@
     <MESSAGE value="orderы 90% done" />
     <MESSAGE value="orders 99% done" />
     <MESSAGE value="99.9% done" />
-    <option name="LAST_COMMIT_MESSAGE" value="99.9% done" />
+    <MESSAGE value="done ?!" />
+    <option name="LAST_COMMIT_MESSAGE" value="done ?!" />
   </component>
 </project>
